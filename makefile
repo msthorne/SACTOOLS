@@ -7,7 +7,7 @@ RM=/bin/rm -f
 BINDIR=./bin                 
 
 
-all : modules sac2xy xy2sac 
+all : modules sac2xy xy2sac amp2sac
 
 #Compile modules.
 modules : mod_sac_io.f90
@@ -21,6 +21,10 @@ sac2xy : sac2xy.f90 modules
 xy2sac : xy2sac.f90 modules
 	$(F90) $(FFLAGS) xy2sac.f90 -o xy2sac ./mod_sac_io.o
 	mv xy2sac $(BINDIR)
+
+amp2sac : amp2sac.f90
+	$(F90) $(FFLAGS) amp2sac.f90 -o amp2sac ./mod_sac_io.o
+	mv amp2sac $(BINDIR)
 
 
 #Copy executable to appropriate directories.
