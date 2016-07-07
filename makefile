@@ -7,7 +7,7 @@ RM=/bin/rm -f
 BINDIR=./bin                 
 
 
-all : modules amp2sac sac2xy sac2xyfill sachead stacksac xy2sac 
+all : modules amp2sac sac2xy sac2xyfill sachead stacksac stacksacall xy2sac 
 
 #Compile modules.
 modules : mod_sac_io.f90
@@ -33,6 +33,10 @@ sachead : sachead.f90 modules
 stacksac : stacksac.f90 modules
 	$(F90) $(FFLAGS) stacksac.f90 -o stacksac ./mod_sac_io.o
 	mv stacksac $(BINDIR)
+
+stacksacall : stacksacall.f90 modules
+	$(F90) $(FFLAGS) stacksacall.f90 -o stacksacall ./mod_sac_io.o
+	mv stacksacall $(BINDIR)
 
 xy2sac : xy2sac.f90 modules
 	$(F90) $(FFLAGS) xy2sac.f90 -o xy2sac ./mod_sac_io.o
