@@ -1,0 +1,52 @@
+SACTOOLS
+#------------------------------------------------------------------------------------#
+A series of command line tools that interact with Seismic Analysis Code (SAC)
+formatted files.  These are just some rather basic tools to do some routine things
+on seismograms that I have found useful over the past several years.
+
+Here I provide a *very* brief description of the utilities included in this repository.
+For more details on the use of these utilities see the 'examples' directory.
+#------------------------------------------------------------------------------------#
+
+
+# Codes currently included in the repository:
+#------------------------------------------------------------------------------------#
+1) amp2sac (amp2sac.f90) - takes a column of amplitude values in ASCII and converts
+                           these to SAC format.
+
+2) sac2xy (sac2xy.f90) - converts a SAC file into an x,y table of time and amplitude.
+
+3) sac2xyfill (sac2xyfill.f90) - same as sac2xy but fills in the positive amplitudes.
+
+4) sachead (sachead.f90) - return the value of a SAC header variable.
+
+5) stacksac (stacksac.f90) - linearly stack some SAC files.
+
+6) stacksacall - take a group of SAC files and stack them in epicentral distance bins.
+
+7) stacksacallaz - Stack a group of SAC files in azimuth bins.
+
+8) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
+                         file.
+
+
+# Modules included in the repository
+#------------------------------------------------------------------------------------#
+1) mod_sac_io.f90 - authored by Nicholas Schmerr. Fortran module for reading/
+                    writing SAC files
+
+
+# Existing codes slated to be added to the repository
+#------------------------------------------------------------------------------------#
+1) mavg - computes moving average on a SAC file
+2) mergesac - merges multiple SAC files into a single file
+3) padsac - pads two SAC files with zeros to start and end at the same time
+4) peaks - finds peaks in SAC files
+5) rmserror - calculates RMS misfit between 2 SAC files
+6) sacmax - finds maximum/minimum amplitudes (and corresponding times) within a set
+            time window in a SAC file.
+7) sacsnr - determines a signal to noise ratio of a SAC file
+8) sacunused - sets 'unused' header variables in SAC
+9) stalta - computes STA/LTA of a SAC file
+10) xcorr - time domain cross-correlation between SAC files
+11) convolve - convolve basic functions with a SAC file
