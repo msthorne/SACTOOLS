@@ -1,5 +1,4 @@
 PROGRAM sacstacking
-!USE F90_UNIX_ENV
 !Performs simple linear stacking of SAC formatted files listed
 ! in the input file
 USE sac_i_o
@@ -22,11 +21,11 @@ CHARACTER(LEN=3) :: istr
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 4) THEN
-  write(*,'(a)') "usage:  stacksac filelist mindist maxdist dbin"
+  write(*,'(a)') "usage:  stacksacallaz filelist minaz maxaz azbin"
   write(*,'(a)') "        filelist: list of files to be stacked"
-  write(*,'(a)') "        mindist:  minimum epicentral distance"
-  write(*,'(a)') "        maxdist:  maximum epicentral distance"
-  write(*,'(a)') "        dbin:     size of epicentral distance bins"
+  write(*,'(a)') "        minaz:  minimum azimuth"
+  write(*,'(a)') "        maxaz:  maximum azimuth"
+  write(*,'(a)') "        azbin:  size of azimuth bins"
   STOP
 ENDIF
 
@@ -46,9 +45,9 @@ CALL GETARG(4,junk)
 read(junk,*) dbin
 
 write(*,*) "Stacking SAC files in list '", TRIM(adjustl(file1)), "' ..."
-write(*,*) "  Using Minimum Epicentral Distance: ", mindist, " (deg)"
-write(*,*) "  Using Maximum Epicentral Distance: ", maxdist, " (deg)"
-write(*,*) "  Using Epicentral Distance Bin Size: ", dbin, " (deg)"
+write(*,*) "  Using Minimum Azimuth: ", mindist, " (deg)"
+write(*,*) "  Using Maximum Azimuth: ", maxdist, " (deg)"
+write(*,*) "  Using Azimuth Bin Size: ", dbin, " (deg)"
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !    -- DECIDE BIN LIMITS
