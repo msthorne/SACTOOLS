@@ -14,7 +14,7 @@ modules : mod_sac_io.f90
 	$(F90) $(FFLAGS) -c mod_sac_io.f90
 
 #Compile Source-code and link.
-amp2sac : amp2sac.f90
+amp2sac : amp2sac.f90 modules
 	$(F90) $(FFLAGS) amp2sac.f90 -o amp2sac ./mod_sac_io.o
 	mv amp2sac $(BINDIR)
 
@@ -45,11 +45,6 @@ stacksacallaz : stacksacallaz.f90 modules
 xy2sac : xy2sac.f90 modules
 	$(F90) $(FFLAGS) xy2sac.f90 -o xy2sac ./mod_sac_io.o
 	mv xy2sac $(BINDIR)
-
-
-#Copy executable to appropriate directories.
-#main : mod_sac_io.o sac2xy
-#	cp sac2xy $(BINDIR)
 
 clean :
 	  $(RM) mod_sac_io.o sac_i_o.mod

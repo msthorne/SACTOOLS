@@ -1,6 +1,5 @@
 PROGRAM ampsac
 !Convert single column of amplitude values to SAC file
-!by Michael Thorne
 USE sac_i_o
 IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: amps, dummy
@@ -34,7 +33,7 @@ CLOSE(1)
 
 CALL GETARG(2,osacfile)
 
-write(*,*) "Writing XY file: '", TRIM(adjustl(ampvals)), "' to SAC file: '", &
+write(*,*) "Writing amplitude file: '", TRIM(adjustl(ampvals)), "' to SAC file: '", &
            & TRIM(adjustl(osacfile)), "' ..."
 
 CALL GETARG(3,deltastr)
@@ -43,7 +42,7 @@ read(deltastr,*) deltaa
 write(*,*) "Using delta spacing of: ", deltaa, " (sec);", 1.0/deltaa, " (Hz)"
 
 
-!    --  R E A D   I N P U T  X-Y  T A B L E  --
+!    --  READ INPUT TABLE  -- 
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !Determine total number of lines in file

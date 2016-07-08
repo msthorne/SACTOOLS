@@ -5,7 +5,7 @@
 %%Creator: GMT
 %%For: u0597445
 %%DocumentNeededResources: font Helvetica
-%%CreationDate: Fri Jul  8 04:32:03 2016
+%%CreationDate: Fri Jul  8 04:56:23 2016
 %%LanguageLevel: 2
 %%DocumentData: Clean7Bit
 %%Orientation: Portrait
@@ -526,13 +526,13 @@ PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencod
 0 setlinecap
 0 setlinejoin
 3.32551 setmiterlimit
-300 300 T
+300 600 T
 
 %% PostScript produced by:
-%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 Afill.xy -P -W1/0/0/205 -K -B25g10000f5/1g1000nSeW
+%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 Afill.xy -P -W1/20/140/180 -K -B25g10000f5:Relative Time (s):/1g1000nSeW -Y2.0i
 %%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
 S 1 W
-S 0 0 0.804 C
+S 0.0784 0.549 0.706 C
 0 254 M
 1 -1 D
 1 -1 D
@@ -2932,7 +2932,7 @@ S 2 W
 -90 R -1800 0 T
 /PSL_sign -1 def
 /PSL_do_annot 1 def
-/PSL_do_label 0 def
+/PSL_do_label 1 def
 /PSL_do_A1 0 def
 /PSL_TL1 22 def
 /PSL_AO0 22 def
@@ -3038,10 +3038,17 @@ currentpoint /PSL_save_y exch def /PSL_save_x exch def
 0 0 M 58 F0 (100) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
 PSL_save_x PSL_save_y m
 PSL_dim_w 2 div neg 0 G 58 F0 (100) Z
+/PSL_x 900 def
+0 0 M 100 F0 (Relative Time \(s\)) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_x PSL_L_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 100 F0 (Relative Time \(s\)) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 100 F0 (Relative Time \(s\)) Z
 0 600 T
 /PSL_sign 1 def
 /PSL_do_annot 0 def
-/PSL_do_label 0 def
+/PSL_do_label 1 def
 /PSL_do_A1 0 def
 /PSL_TL1 22 def
 /PSL_AO0 22 def
@@ -3107,10 +3114,10 @@ PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencod
 3.32551 setmiterlimit
 
 %% PostScript produced by:
-%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 A.xy -O -K -W4/205/0/0
+%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 A.xy -O -K -W6/0/0/0
 %%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
-S 4 W
-S 0.804 0 0 C
+S 6 W
+S 0 A
 0 254 M
 1 -1 D
 1 -1 D
@@ -4721,7 +4728,22 @@ PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencod
 3.32551 setmiterlimit
 
 %% PostScript produced by:
-%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 stacked.xy -O -K -W6/0/0/0
+%%GMT:  pstext -JX6i/2i -R-40/120/-1/1 -N -O -K -P -G0/0/0
+%%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
+S 0 W
+S 0 A
+PSL_font_encode 1 get 0 eq {Standard+_Encoding /Helvetica-Bold /Helvetica-Bold PSL_reencode PSL_font_encode 1 1 put} if
+0 630 M 50 F1 (Test sac2xy and sac2xyfill) Z
+22 540 M 50 F1 (KSTNM: LVA2) Z
+S 0 A
+PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
+0 setlinecap
+0 setlinejoin
+3.32551 setmiterlimit
+0 825 T
+
+%% PostScript produced by:
+%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 stacked.xy -O -K -W6/0/0/0 -B25g10000f5/1g1000nSeW -y2.75i
 %%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
 S 6 W
 S 0 A
@@ -5605,15 +5627,273 @@ S 0 A
 1 1 D
 1 0 D
 S
+S 1 W
+450 0 M
+0 600 D
+S
+0 300 M
+1800 0 D
+S
+90 R
+/PSL_sign 1 def
+/PSL_do_annot 1 def
+/PSL_do_label 0 def
+/PSL_do_A1 0 def
+/PSL_TL1 22 def
+/PSL_AO0 22 def
+/PSL_AO1 22 def
+/PSL_LO 34 def
+/PSL_AF0 58 def
+/PSL_AF1 67 def
+/PSL_LF 100 def
+/PSL_AH0 0 def
+/PSL_AH1 0 def
+0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_dim_d sub /PSL_LH exch def
+S 5 W
+0 0 M 600 0 D S
+S 2 W
+0 0 M 0 22 D S
+300 0 M 0 22 D S
+600 0 M 0 22 D S
+0 0 M 58 F0 (-1) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_w PSL_AH0 gt {/PSL_AH0 PSL_dim_w def} if
+0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_w PSL_AH0 gt {/PSL_AH0 PSL_dim_w def} if
+0 0 M 58 F0 (1) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_w PSL_AH0 gt {/PSL_AH0 PSL_dim_w def} if
+0 0 M 0 11 D S
+300 0 M 0 11 D S
+600 0 M 0 11 D S
+/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
+/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
+/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
+/PSL_x 0 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (-1) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+V -90 R PSL_dim_w neg PSL_dim_h 2 div neg G 58 F0 (-1) Z U
+/PSL_x 300 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+V -90 R PSL_dim_w neg PSL_dim_h 2 div neg G 58 F0 (0) Z U
+/PSL_x 600 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (1) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+V -90 R PSL_dim_w neg PSL_dim_h 2 div neg G 58 F0 (1) Z U
+-90 R
+1800 0 T 90 R
+/PSL_sign -1 def
+/PSL_do_annot 0 def
+/PSL_do_label 0 def
+/PSL_do_A1 0 def
+/PSL_TL1 22 def
+/PSL_AO0 22 def
+/PSL_AO1 22 def
+/PSL_LO 34 def
+/PSL_AF0 58 def
+/PSL_AF1 67 def
+/PSL_LF 100 def
+/PSL_AH0 0 def
+/PSL_AH1 0 def
+0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_dim_d sub /PSL_LH exch def
+S 5 W
+0 0 M 600 0 D S
+S 2 W
+0 0 M 0 -22 D S
+300 0 M 0 -22 D S
+600 0 M 0 -22 D S
+0 0 M 0 -11 D S
+300 0 M 0 -11 D S
+600 0 M 0 -11 D S
+/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
+/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
+/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
+-90 R -1800 0 T
+/PSL_sign -1 def
+/PSL_do_annot 1 def
+/PSL_do_label 0 def
+/PSL_do_A1 0 def
+/PSL_TL1 22 def
+/PSL_AO0 22 def
+/PSL_AO1 22 def
+/PSL_LO 34 def
+/PSL_AF0 58 def
+/PSL_AF1 67 def
+/PSL_LF 100 def
+/PSL_AH0 0 def
+/PSL_AH1 0 def
+0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_dim_d sub /PSL_LH exch def
+S 5 W
+0 0 M 1800 0 D S
+S 2 W
+169 0 M 0 -22 D S
+450 0 M 0 -22 D S
+731 0 M 0 -22 D S
+1012 0 M 0 -22 D S
+1294 0 M 0 -22 D S
+1575 0 M 0 -22 D S
+0 0 M 58 F0 (-25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (50) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (75) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (100) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 0 -11 D S
+56 0 M 0 -11 D S
+112 0 M 0 -11 D S
+169 0 M 0 -11 D S
+225 0 M 0 -11 D S
+281 0 M 0 -11 D S
+338 0 M 0 -11 D S
+394 0 M 0 -11 D S
+450 0 M 0 -11 D S
+506 0 M 0 -11 D S
+562 0 M 0 -11 D S
+619 0 M 0 -11 D S
+675 0 M 0 -11 D S
+731 0 M 0 -11 D S
+788 0 M 0 -11 D S
+844 0 M 0 -11 D S
+900 0 M 0 -11 D S
+956 0 M 0 -11 D S
+1012 0 M 0 -11 D S
+1069 0 M 0 -11 D S
+1125 0 M 0 -11 D S
+1181 0 M 0 -11 D S
+1238 0 M 0 -11 D S
+1294 0 M 0 -11 D S
+1350 0 M 0 -11 D S
+1406 0 M 0 -11 D S
+1462 0 M 0 -11 D S
+1519 0 M 0 -11 D S
+1575 0 M 0 -11 D S
+1631 0 M 0 -11 D S
+1688 0 M 0 -11 D S
+1744 0 M 0 -11 D S
+1800 0 M 0 -11 D S
+/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
+/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
+/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
+/PSL_x 169 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (-25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (-25) Z
+/PSL_x 450 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (0) Z
+/PSL_x 731 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (25) Z
+/PSL_x 1012 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (50) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (50) Z
+/PSL_x 1294 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (75) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (75) Z
+/PSL_x 1575 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (100) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (100) Z
+0 600 T
+/PSL_sign 1 def
+/PSL_do_annot 0 def
+/PSL_do_label 0 def
+/PSL_do_A1 0 def
+/PSL_TL1 22 def
+/PSL_AO0 22 def
+/PSL_AO1 22 def
+/PSL_LO 34 def
+/PSL_AF0 58 def
+/PSL_AF1 67 def
+/PSL_LF 100 def
+/PSL_AH0 0 def
+/PSL_AH1 0 def
+0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_dim_d sub /PSL_LH exch def
+S 5 W
+0 0 M 1800 0 D S
+S 2 W
+169 0 M 0 22 D S
+450 0 M 0 22 D S
+731 0 M 0 22 D S
+1012 0 M 0 22 D S
+1294 0 M 0 22 D S
+1575 0 M 0 22 D S
+0 0 M 0 11 D S
+56 0 M 0 11 D S
+112 0 M 0 11 D S
+169 0 M 0 11 D S
+225 0 M 0 11 D S
+281 0 M 0 11 D S
+338 0 M 0 11 D S
+394 0 M 0 11 D S
+450 0 M 0 11 D S
+506 0 M 0 11 D S
+562 0 M 0 11 D S
+619 0 M 0 11 D S
+675 0 M 0 11 D S
+731 0 M 0 11 D S
+788 0 M 0 11 D S
+844 0 M 0 11 D S
+900 0 M 0 11 D S
+956 0 M 0 11 D S
+1012 0 M 0 11 D S
+1069 0 M 0 11 D S
+1125 0 M 0 11 D S
+1181 0 M 0 11 D S
+1238 0 M 0 11 D S
+1294 0 M 0 11 D S
+1350 0 M 0 11 D S
+1406 0 M 0 11 D S
+1462 0 M 0 11 D S
+1519 0 M 0 11 D S
+1575 0 M 0 11 D S
+1631 0 M 0 11 D S
+1688 0 M 0 11 D S
+1744 0 M 0 11 D S
+1800 0 M 0 11 D S
+/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
+/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
+/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
+0 -600 T
 S 0 A
 PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
 0 setlinecap
 0 setlinejoin
 3.32551 setmiterlimit
-0 750 T
 
 %% PostScript produced by:
-%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 s1.xy -O -K -W4/205/0/0 -y2.5i -B25g10000f5/1g1000nSew
+%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 s1.xy -O -K -W4/205/0/0
 %%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
 S 4 W
 S 0.804 0 0 C
@@ -6587,242 +6867,6 @@ S 0.804 0 0 C
 1 0 D
 S
 S 0 A
-S 1 W
-450 0 M
-0 600 D
-S
-0 300 M
-1800 0 D
-S
-90 R
-/PSL_sign 1 def
-/PSL_do_annot 0 def
-/PSL_do_label 0 def
-/PSL_do_A1 0 def
-/PSL_TL1 22 def
-/PSL_AO0 22 def
-/PSL_AO1 22 def
-/PSL_LO 34 def
-/PSL_AF0 58 def
-/PSL_AF1 67 def
-/PSL_LF 100 def
-/PSL_AH0 0 def
-/PSL_AH1 0 def
-0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_dim_d sub /PSL_LH exch def
-S 5 W
-0 0 M 600 0 D S
-S 2 W
-0 0 M 0 22 D S
-300 0 M 0 22 D S
-600 0 M 0 22 D S
-0 0 M 0 11 D S
-300 0 M 0 11 D S
-600 0 M 0 11 D S
-/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
-/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
-/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
--90 R
-1800 0 T 90 R
-/PSL_sign -1 def
-/PSL_do_annot 0 def
-/PSL_do_label 0 def
-/PSL_do_A1 0 def
-/PSL_TL1 22 def
-/PSL_AO0 22 def
-/PSL_AO1 22 def
-/PSL_LO 34 def
-/PSL_AF0 58 def
-/PSL_AF1 67 def
-/PSL_LF 100 def
-/PSL_AH0 0 def
-/PSL_AH1 0 def
-0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_dim_d sub /PSL_LH exch def
-S 5 W
-0 0 M 600 0 D S
-S 2 W
-0 0 M 0 -22 D S
-300 0 M 0 -22 D S
-600 0 M 0 -22 D S
-0 0 M 0 -11 D S
-300 0 M 0 -11 D S
-600 0 M 0 -11 D S
-/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
-/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
-/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
--90 R -1800 0 T
-/PSL_sign -1 def
-/PSL_do_annot 1 def
-/PSL_do_label 0 def
-/PSL_do_A1 0 def
-/PSL_TL1 22 def
-/PSL_AO0 22 def
-/PSL_AO1 22 def
-/PSL_LO 34 def
-/PSL_AF0 58 def
-/PSL_AF1 67 def
-/PSL_LF 100 def
-/PSL_AH0 0 def
-/PSL_AH1 0 def
-0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_dim_d sub /PSL_LH exch def
-S 5 W
-0 0 M 1800 0 D S
-S 2 W
-169 0 M 0 -22 D S
-450 0 M 0 -22 D S
-731 0 M 0 -22 D S
-1012 0 M 0 -22 D S
-1294 0 M 0 -22 D S
-1575 0 M 0 -22 D S
-0 0 M 58 F0 (-25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
-0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
-0 0 M 58 F0 (25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
-0 0 M 58 F0 (50) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
-0 0 M 58 F0 (75) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
-0 0 M 58 F0 (100) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
-0 0 M 0 -11 D S
-56 0 M 0 -11 D S
-112 0 M 0 -11 D S
-169 0 M 0 -11 D S
-225 0 M 0 -11 D S
-281 0 M 0 -11 D S
-338 0 M 0 -11 D S
-394 0 M 0 -11 D S
-450 0 M 0 -11 D S
-506 0 M 0 -11 D S
-562 0 M 0 -11 D S
-619 0 M 0 -11 D S
-675 0 M 0 -11 D S
-731 0 M 0 -11 D S
-788 0 M 0 -11 D S
-844 0 M 0 -11 D S
-900 0 M 0 -11 D S
-956 0 M 0 -11 D S
-1012 0 M 0 -11 D S
-1069 0 M 0 -11 D S
-1125 0 M 0 -11 D S
-1181 0 M 0 -11 D S
-1238 0 M 0 -11 D S
-1294 0 M 0 -11 D S
-1350 0 M 0 -11 D S
-1406 0 M 0 -11 D S
-1462 0 M 0 -11 D S
-1519 0 M 0 -11 D S
-1575 0 M 0 -11 D S
-1631 0 M 0 -11 D S
-1688 0 M 0 -11 D S
-1744 0 M 0 -11 D S
-1800 0 M 0 -11 D S
-/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
-/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
-/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
-/PSL_x 169 def
-PSL_x PSL_A0_y M
-currentpoint /PSL_save_y exch def /PSL_save_x exch def
-0 0 M 58 F0 (-25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_save_x PSL_save_y m
-PSL_dim_w 2 div neg 0 G 58 F0 (-25) Z
-/PSL_x 450 def
-PSL_x PSL_A0_y M
-currentpoint /PSL_save_y exch def /PSL_save_x exch def
-0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_save_x PSL_save_y m
-PSL_dim_w 2 div neg 0 G 58 F0 (0) Z
-/PSL_x 731 def
-PSL_x PSL_A0_y M
-currentpoint /PSL_save_y exch def /PSL_save_x exch def
-0 0 M 58 F0 (25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_save_x PSL_save_y m
-PSL_dim_w 2 div neg 0 G 58 F0 (25) Z
-/PSL_x 1012 def
-PSL_x PSL_A0_y M
-currentpoint /PSL_save_y exch def /PSL_save_x exch def
-0 0 M 58 F0 (50) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_save_x PSL_save_y m
-PSL_dim_w 2 div neg 0 G 58 F0 (50) Z
-/PSL_x 1294 def
-PSL_x PSL_A0_y M
-currentpoint /PSL_save_y exch def /PSL_save_x exch def
-0 0 M 58 F0 (75) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_save_x PSL_save_y m
-PSL_dim_w 2 div neg 0 G 58 F0 (75) Z
-/PSL_x 1575 def
-PSL_x PSL_A0_y M
-currentpoint /PSL_save_y exch def /PSL_save_x exch def
-0 0 M 58 F0 (100) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_save_x PSL_save_y m
-PSL_dim_w 2 div neg 0 G 58 F0 (100) Z
-0 600 T
-/PSL_sign 1 def
-/PSL_do_annot 0 def
-/PSL_do_label 0 def
-/PSL_do_A1 0 def
-/PSL_TL1 22 def
-/PSL_AO0 22 def
-/PSL_AO1 22 def
-/PSL_LO 34 def
-/PSL_AF0 58 def
-/PSL_AF1 67 def
-/PSL_LF 100 def
-/PSL_AH0 0 def
-/PSL_AH1 0 def
-0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
-PSL_dim_h PSL_dim_d sub /PSL_LH exch def
-S 5 W
-0 0 M 1800 0 D S
-S 2 W
-169 0 M 0 22 D S
-450 0 M 0 22 D S
-731 0 M 0 22 D S
-1012 0 M 0 22 D S
-1294 0 M 0 22 D S
-1575 0 M 0 22 D S
-0 0 M 0 11 D S
-56 0 M 0 11 D S
-112 0 M 0 11 D S
-169 0 M 0 11 D S
-225 0 M 0 11 D S
-281 0 M 0 11 D S
-338 0 M 0 11 D S
-394 0 M 0 11 D S
-450 0 M 0 11 D S
-506 0 M 0 11 D S
-562 0 M 0 11 D S
-619 0 M 0 11 D S
-675 0 M 0 11 D S
-731 0 M 0 11 D S
-788 0 M 0 11 D S
-844 0 M 0 11 D S
-900 0 M 0 11 D S
-956 0 M 0 11 D S
-1012 0 M 0 11 D S
-1069 0 M 0 11 D S
-1125 0 M 0 11 D S
-1181 0 M 0 11 D S
-1238 0 M 0 11 D S
-1294 0 M 0 11 D S
-1350 0 M 0 11 D S
-1406 0 M 0 11 D S
-1462 0 M 0 11 D S
-1519 0 M 0 11 D S
-1575 0 M 0 11 D S
-1631 0 M 0 11 D S
-1688 0 M 0 11 D S
-1744 0 M 0 11 D S
-1800 0 M 0 11 D S
-/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
-/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
-/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
-0 -600 T
-S 0 A
 PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
 0 setlinecap
 0 setlinejoin
@@ -7755,3 +7799,2096 @@ S 0 0 0.804 C
 1 1 D
 S
 S 0 A
+PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
+0 setlinecap
+0 setlinejoin
+3.32551 setmiterlimit
+
+%% PostScript produced by:
+%%GMT:  pstext -JX6i/2i -R-40/120/-1/1 -N -O -K -P -G0/0/0
+%%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
+S 0 W
+S 0 A
+PSL_font_encode 1 get 0 eq {Standard+_Encoding /Helvetica-Bold /Helvetica-Bold PSL_reencode PSL_font_encode 1 1 put} if
+0 750 M 50 F1 (Black:  All files stacked \(stacksac\)) Z
+S 0 A
+PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
+0 setlinecap
+0 setlinejoin
+3.32551 setmiterlimit
+
+%% PostScript produced by:
+%%GMT:  pstext -JX6i/2i -R-40/120/-1/1 -N -O -K -P -G205/0/0
+%%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
+S 0 W
+S 0 A
+PSL_font_encode 1 get 0 eq {Standard+_Encoding /Helvetica-Bold /Helvetica-Bold PSL_reencode PSL_font_encode 1 1 put} if
+S 0.804 0 0 C
+0 690 M 50 F1 (Red: Distance range 70-71 deg \(stacksacall\)) Z
+S 0 A
+PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
+0 setlinecap
+0 setlinejoin
+3.32551 setmiterlimit
+
+%% PostScript produced by:
+%%GMT:  pstext -JX6i/2i -R-40/120/-1/1 -N -O -K -P -G0/0/205
+%%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
+S 0 W
+S 0 A
+PSL_font_encode 1 get 0 eq {Standard+_Encoding /Helvetica-Bold /Helvetica-Bold PSL_reencode PSL_font_encode 1 1 put} if
+S 0 0 0.804 C
+0 630 M 50 F1 (Blue: Distance range 71-72 deg \(stacksacall\)) Z
+S 0 A
+PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
+0 setlinecap
+0 setlinejoin
+3.32551 setmiterlimit
+0 930 T
+
+%% PostScript produced by:
+%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 s1.xy -O -K -W4/205/0/0 -B25g10000f5/1g1000nSeW -y3.1i
+%%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
+S 4 W
+S 0.804 0 0 C
+0 291 M
+1 -1 D
+5 0 D
+1 -1 D
+7 0 D
+1 -1 D
+5 0 D
+1 1 D
+5 0 D
+1 1 D
+2 0 D
+1 1 D
+3 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+2 0 D
+2 2 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+2 2 D
+1 0 D
+1 1 D
+3 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+4 0 D
+1 1 D
+3 0 D
+1 1 D
+23 0 D
+1 -1 D
+10 0 D
+1 -1 D
+12 0 D
+1 -1 D
+10 0 D
+1 -1 D
+4 0 D
+1 -1 D
+3 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+2 -2 D
+2 0 D
+1 -1 D
+1 0 D
+3 -3 D
+1 0 D
+1 -1 D
+2 -1 D
+2 -2 D
+1 0 D
+5 -5 D
+2 -1 D
+1 0 D
+4 -4 D
+1 0 D
+2 -1 D
+1 -1 D
+1 0 D
+2 -2 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+3 0 D
+1 -1 D
+12 0 D
+1 1 D
+4 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+3 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+2 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+3 0 D
+1 1 D
+2 0 D
+1 1 D
+2 0 D
+1 1 D
+4 0 D
+1 1 D
+3 0 D
+1 1 D
+7 0 D
+1 1 D
+7 0 D
+1 1 D
+8 0 D
+1 1 D
+16 0 D
+1 -1 D
+3 0 D
+1 -1 D
+3 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+2 -2 D
+1 0 D
+2 -1 D
+1 -1 D
+1 0 D
+3 -3 D
+1 0 D
+1 -1 D
+2 -1 D
+1 0 D
+2 -2 D
+1 0 D
+2 -2 D
+1 0 D
+2 -1 D
+1 0 D
+1 -1 D
+1 0 D
+2 -2 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+2 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+3 0 D
+1 -1 D
+4 0 D
+1 -1 D
+29 0 D
+2 -1 D
+12 0 D
+1 -1 D
+10 0 D
+1 -1 D
+15 0 D
+1 -1 D
+7 0 D
+1 -1 D
+5 0 D
+1 -1 D
+4 0 D
+1 -1 D
+9 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+4 4 D
+1 2 D
+3 3 D
+3 6 D
+1 3 D
+1 2 D
+2 6 D
+2 4 D
+1 3 D
+2 8 D
+1 5 D
+1 4 D
+1 5 D
+2 5 D
+2 10 D
+4 24 D
+1 7 D
+2 6 D
+4 28 D
+1 8 D
+2 14 D
+2 8 D
+1 8 D
+1 7 D
+3 24 D
+1 7 D
+1 8 D
+2 7 D
+1 8 D
+5 35 D
+1 6 D
+1 7 D
+2 6 D
+1 5 D
+1 6 D
+3 15 D
+1 4 D
+2 4 D
+1 3 D
+1 4 D
+1 3 D
+3 6 D
+3 3 D
+1 0 D
+1 1 D
+1 0 D
+6 -6 D
+2 -4 D
+3 -9 D
+3 -12 D
+2 -4 D
+4 -20 D
+1 -6 D
+1 -5 D
+1 -6 D
+2 -6 D
+1 -6 D
+1 -7 D
+1 -6 D
+2 -14 D
+1 -6 D
+2 -7 D
+3 -21 D
+1 -8 D
+3 -21 D
+2 -8 D
+1 -7 D
+1 -8 D
+3 -21 D
+1 -8 D
+1 -7 D
+2 -7 D
+6 -42 D
+1 -6 D
+2 -7 D
+1 -6 D
+1 -7 D
+3 -18 D
+1 -5 D
+1 -6 D
+1 -5 D
+2 -6 D
+3 -15 D
+1 -4 D
+1 -5 D
+1 -4 D
+2 -4 D
+3 -12 D
+1 -3 D
+1 -4 D
+2 -6 D
+2 -3 D
+1 -3 D
+1 -2 D
+1 -3 D
+4 -8 D
+2 -2 D
+2 -4 D
+2 -2 D
+1 -2 D
+3 -3 D
+2 -1 D
+1 -1 D
+1 0 D
+2 -2 D
+1 0 D
+1 -1 D
+3 0 D
+1 -1 D
+12 0 D
+1 1 D
+4 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+2 1 D
+1 0 D
+1 1 D
+1 0 D
+3 3 D
+1 0 D
+2 1 D
+8 8 D
+2 1 D
+3 3 D
+1 2 D
+5 5 D
+1 2 D
+1 1 D
+1 2 D
+1 1 D
+1 2 D
+3 3 D
+1 2 D
+1 1 D
+3 6 D
+1 1 D
+1 2 D
+2 2 D
+1 2 D
+1 1 D
+3 6 D
+1 1 D
+1 2 D
+3 3 D
+1 2 D
+1 1 D
+1 2 D
+2 2 D
+1 2 D
+2 1 D
+8 8 D
+2 0 D
+2 2 D
+2 0 D
+1 1 D
+3 0 D
+1 1 D
+4 0 D
+1 1 D
+10 0 D
+2 1 D
+3 0 D
+1 1 D
+2 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+2 2 D
+1 0 D
+3 3 D
+2 1 D
+5 5 D
+1 2 D
+2 1 D
+1 1 D
+1 2 D
+2 2 D
+2 4 D
+4 4 D
+4 8 D
+1 1 D
+2 4 D
+2 2 D
+5 10 D
+1 3 D
+2 2 D
+5 10 D
+1 3 D
+2 4 D
+2 2 D
+2 4 D
+1 3 D
+3 6 D
+2 2 D
+1 2 D
+1 3 D
+5 10 D
+2 2 D
+1 3 D
+6 12 D
+2 2 D
+3 6 D
+1 1 D
+3 6 D
+3 3 D
+1 2 D
+1 1 D
+1 2 D
+1 1 D
+1 2 D
+2 2 D
+2 1 D
+5 5 D
+1 0 D
+2 1 D
+1 0 D
+1 1 D
+3 0 D
+1 -1 D
+3 0 D
+5 -5 D
+1 -2 D
+1 -1 D
+1 -2 D
+2 -2 D
+2 -4 D
+1 -3 D
+1 -2 D
+2 -6 D
+2 -2 D
+1 -3 D
+1 -4 D
+2 -6 D
+1 -4 D
+1 -3 D
+1 -4 D
+1 -3 D
+2 -4 D
+6 -24 D
+2 -4 D
+4 -16 D
+1 -5 D
+2 -8 D
+2 -4 D
+2 -8 D
+1 -3 D
+3 -12 D
+1 -3 D
+1 -4 D
+2 -3 D
+2 -6 D
+1 -4 D
+1 -2 D
+2 -6 D
+2 -3 D
+6 -12 D
+2 -2 D
+2 -1 D
+2 -2 D
+1 0 D
+1 -1 D
+2 0 D
+2 1 D
+1 0 D
+5 5 D
+1 2 D
+2 2 D
+3 6 D
+5 15 D
+2 3 D
+1 4 D
+1 3 D
+4 16 D
+2 4 D
+1 4 D
+1 5 D
+3 12 D
+1 5 D
+1 4 D
+1 5 D
+2 4 D
+1 4 D
+1 5 D
+4 16 D
+2 4 D
+2 8 D
+1 3 D
+1 4 D
+1 3 D
+1 4 D
+1 3 D
+2 3 D
+1 3 D
+1 2 D
+2 6 D
+3 6 D
+2 2 D
+1 2 D
+1 1 D
+1 2 D
+4 4 D
+2 1 D
+2 0 D
+1 1 D
+3 0 D
+1 -1 D
+1 0 D
+2 -1 D
+1 0 D
+4 -4 D
+1 -2 D
+2 -1 D
+1 -1 D
+1 -2 D
+1 -1 D
+3 -6 D
+3 -3 D
+3 -6 D
+1 -3 D
+4 -8 D
+2 -3 D
+3 -6 D
+1 -3 D
+2 -4 D
+2 -3 D
+3 -6 D
+1 -3 D
+4 -8 D
+2 -3 D
+4 -8 D
+1 -3 D
+1 -2 D
+2 -2 D
+7 -14 D
+2 -2 D
+5 -10 D
+1 -1 D
+1 -2 D
+3 -3 D
+1 -2 D
+1 -1 D
+1 -2 D
+3 -3 D
+2 -1 D
+4 -4 D
+1 0 D
+1 -1 D
+2 0 D
+2 -1 D
+3 0 D
+1 1 D
+2 0 D
+2 1 D
+1 0 D
+1 1 D
+1 0 D
+3 3 D
+1 0 D
+2 1 D
+8 8 D
+2 1 D
+1 2 D
+5 5 D
+2 0 D
+4 4 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+2 0 D
+1 1 D
+8 0 D
+1 -1 D
+2 0 D
+2 -2 D
+1 0 D
+2 -1 D
+6 -6 D
+1 -2 D
+2 -1 D
+1 -1 D
+1 -2 D
+1 -1 D
+1 -2 D
+1 -1 D
+1 -2 D
+4 -4 D
+1 -2 D
+1 -1 D
+1 -2 D
+1 -1 D
+1 -2 D
+10 -10 D
+2 0 D
+2 -2 D
+1 0 D
+1 -1 D
+11 0 D
+1 1 D
+1 0 D
+2 1 D
+1 0 D
+2 2 D
+1 0 D
+2 2 D
+2 0 D
+3 3 D
+1 0 D
+4 4 D
+2 0 D
+3 3 D
+1 0 D
+2 2 D
+2 1 D
+1 0 D
+3 3 D
+1 0 D
+2 2 D
+2 0 D
+3 3 D
+1 0 D
+3 3 D
+2 1 D
+1 0 D
+6 6 D
+2 1 D
+5 5 D
+1 2 D
+2 2 D
+2 1 D
+1 2 D
+2 2 D
+1 2 D
+5 5 D
+1 2 D
+1 1 D
+1 2 D
+1 1 D
+1 2 D
+4 4 D
+1 2 D
+1 1 D
+1 2 D
+2 2 D
+1 2 D
+1 1 D
+2 1 D
+1 2 D
+5 5 D
+2 1 D
+2 2 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+7 0 D
+1 -1 D
+2 0 D
+2 -1 D
+1 -1 D
+1 0 D
+5 -5 D
+2 -1 D
+2 -2 D
+1 -2 D
+3 -3 D
+1 -2 D
+2 -1 D
+2 -2 D
+1 -2 D
+3 -3 D
+1 -2 D
+2 -1 D
+8 -8 D
+2 -1 D
+1 0 D
+2 -2 D
+1 0 D
+1 -1 D
+1 0 D
+2 -1 D
+2 0 D
+1 -1 D
+9 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+2 1 D
+1 0 D
+2 2 D
+1 0 D
+2 2 D
+2 1 D
+7 7 D
+2 1 D
+7 7 D
+2 1 D
+5 5 D
+1 0 D
+2 2 D
+2 1 D
+1 0 D
+2 2 D
+1 0 D
+1 1 D
+1 0 D
+2 1 D
+1 0 D
+1 1 D
+2 0 D
+1 1 D
+4 0 D
+1 1 D
+10 0 D
+1 -1 D
+3 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+3 -3 D
+1 0 D
+2 -1 D
+4 -4 D
+1 -2 D
+6 -6 D
+2 -4 D
+1 -1 D
+1 -2 D
+3 -3 D
+5 -10 D
+3 -3 D
+5 -10 D
+1 -1 D
+1 -2 D
+2 -2 D
+1 -2 D
+1 -1 D
+1 -2 D
+1 -1 D
+1 -2 D
+2 -2 D
+1 -2 D
+2 -1 D
+2 -2 D
+1 0 D
+2 -2 D
+1 0 D
+1 -1 D
+3 0 D
+1 -1 D
+1 0 D
+1 1 D
+3 0 D
+2 1 D
+1 0 D
+1 1 D
+1 0 D
+2 2 D
+1 0 D
+2 1 D
+6 6 D
+1 0 D
+2 1 D
+5 5 D
+1 0 D
+1 1 D
+2 1 D
+1 0 D
+2 2 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+2 1 D
+2 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+2 1 D
+1 0 D
+1 1 D
+1 0 D
+2 2 D
+1 0 D
+1 1 D
+2 1 D
+1 0 D
+6 6 D
+2 1 D
+4 4 D
+1 2 D
+3 3 D
+2 1 D
+1 2 D
+5 5 D
+2 1 D
+8 8 D
+2 0 D
+1 1 D
+1 0 D
+1 1 D
+10 0 D
+1 -1 D
+1 0 D
+2 -1 D
+1 0 D
+6 -6 D
+2 -1 D
+5 -5 D
+1 -2 D
+2 -2 D
+2 -1 D
+3 -3 D
+1 -2 D
+2 -2 D
+2 -1 D
+1 -1 D
+1 0 D
+4 -4 D
+1 0 D
+2 -1 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+5 0 D
+1 -1 D
+6 0 D
+1 1 D
+2 0 D
+1 1 D
+2 0 D
+2 1 D
+1 0 D
+2 2 D
+1 0 D
+4 4 D
+2 1 D
+4 4 D
+1 0 D
+1 1 D
+2 1 D
+4 4 D
+S
+S 0 A
+S 1 W
+450 0 M
+0 600 D
+S
+0 300 M
+1800 0 D
+S
+90 R
+/PSL_sign 1 def
+/PSL_do_annot 1 def
+/PSL_do_label 0 def
+/PSL_do_A1 0 def
+/PSL_TL1 22 def
+/PSL_AO0 22 def
+/PSL_AO1 22 def
+/PSL_LO 34 def
+/PSL_AF0 58 def
+/PSL_AF1 67 def
+/PSL_LF 100 def
+/PSL_AH0 0 def
+/PSL_AH1 0 def
+0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_dim_d sub /PSL_LH exch def
+S 5 W
+0 0 M 600 0 D S
+S 2 W
+0 0 M 0 22 D S
+300 0 M 0 22 D S
+600 0 M 0 22 D S
+0 0 M 58 F0 (-1) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_w PSL_AH0 gt {/PSL_AH0 PSL_dim_w def} if
+0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_w PSL_AH0 gt {/PSL_AH0 PSL_dim_w def} if
+0 0 M 58 F0 (1) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_w PSL_AH0 gt {/PSL_AH0 PSL_dim_w def} if
+0 0 M 0 11 D S
+300 0 M 0 11 D S
+600 0 M 0 11 D S
+/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
+/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
+/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
+/PSL_x 0 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (-1) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+V -90 R PSL_dim_w neg PSL_dim_h 2 div neg G 58 F0 (-1) Z U
+/PSL_x 300 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+V -90 R PSL_dim_w neg PSL_dim_h 2 div neg G 58 F0 (0) Z U
+/PSL_x 600 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (1) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+V -90 R PSL_dim_w neg PSL_dim_h 2 div neg G 58 F0 (1) Z U
+-90 R
+1800 0 T 90 R
+/PSL_sign -1 def
+/PSL_do_annot 0 def
+/PSL_do_label 0 def
+/PSL_do_A1 0 def
+/PSL_TL1 22 def
+/PSL_AO0 22 def
+/PSL_AO1 22 def
+/PSL_LO 34 def
+/PSL_AF0 58 def
+/PSL_AF1 67 def
+/PSL_LF 100 def
+/PSL_AH0 0 def
+/PSL_AH1 0 def
+0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_dim_d sub /PSL_LH exch def
+S 5 W
+0 0 M 600 0 D S
+S 2 W
+0 0 M 0 -22 D S
+300 0 M 0 -22 D S
+600 0 M 0 -22 D S
+0 0 M 0 -11 D S
+300 0 M 0 -11 D S
+600 0 M 0 -11 D S
+/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
+/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
+/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
+-90 R -1800 0 T
+/PSL_sign -1 def
+/PSL_do_annot 1 def
+/PSL_do_label 0 def
+/PSL_do_A1 0 def
+/PSL_TL1 22 def
+/PSL_AO0 22 def
+/PSL_AO1 22 def
+/PSL_LO 34 def
+/PSL_AF0 58 def
+/PSL_AF1 67 def
+/PSL_LF 100 def
+/PSL_AH0 0 def
+/PSL_AH1 0 def
+0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_dim_d sub /PSL_LH exch def
+S 5 W
+0 0 M 1800 0 D S
+S 2 W
+169 0 M 0 -22 D S
+450 0 M 0 -22 D S
+731 0 M 0 -22 D S
+1012 0 M 0 -22 D S
+1294 0 M 0 -22 D S
+1575 0 M 0 -22 D S
+0 0 M 58 F0 (-25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (50) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (75) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 58 F0 (100) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_AH0 gt {/PSL_AH0 PSL_dim_h def} if
+0 0 M 0 -11 D S
+56 0 M 0 -11 D S
+112 0 M 0 -11 D S
+169 0 M 0 -11 D S
+225 0 M 0 -11 D S
+281 0 M 0 -11 D S
+338 0 M 0 -11 D S
+394 0 M 0 -11 D S
+450 0 M 0 -11 D S
+506 0 M 0 -11 D S
+562 0 M 0 -11 D S
+619 0 M 0 -11 D S
+675 0 M 0 -11 D S
+731 0 M 0 -11 D S
+788 0 M 0 -11 D S
+844 0 M 0 -11 D S
+900 0 M 0 -11 D S
+956 0 M 0 -11 D S
+1012 0 M 0 -11 D S
+1069 0 M 0 -11 D S
+1125 0 M 0 -11 D S
+1181 0 M 0 -11 D S
+1238 0 M 0 -11 D S
+1294 0 M 0 -11 D S
+1350 0 M 0 -11 D S
+1406 0 M 0 -11 D S
+1462 0 M 0 -11 D S
+1519 0 M 0 -11 D S
+1575 0 M 0 -11 D S
+1631 0 M 0 -11 D S
+1688 0 M 0 -11 D S
+1744 0 M 0 -11 D S
+1800 0 M 0 -11 D S
+/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
+/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
+/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
+/PSL_x 169 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (-25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (-25) Z
+/PSL_x 450 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (0) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (0) Z
+/PSL_x 731 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (25) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (25) Z
+/PSL_x 1012 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (50) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (50) Z
+/PSL_x 1294 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (75) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (75) Z
+/PSL_x 1575 def
+PSL_x PSL_A0_y M
+currentpoint /PSL_save_y exch def /PSL_save_x exch def
+0 0 M 58 F0 (100) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_save_x PSL_save_y m
+PSL_dim_w 2 div neg 0 G 58 F0 (100) Z
+0 600 T
+/PSL_sign 1 def
+/PSL_do_annot 0 def
+/PSL_do_label 0 def
+/PSL_do_A1 0 def
+/PSL_TL1 22 def
+/PSL_AO0 22 def
+/PSL_AO1 22 def
+/PSL_LO 34 def
+/PSL_AF0 58 def
+/PSL_AF1 67 def
+/PSL_LF 100 def
+/PSL_AH0 0 def
+/PSL_AH1 0 def
+0 0 M 100 F0 (M) E /PSL_dim_w exch def FP pathbbox N /PSL_dim_h exch def pop /PSL_dim_d exch def pop
+PSL_dim_h PSL_dim_d sub /PSL_LH exch def
+S 5 W
+0 0 M 1800 0 D S
+S 2 W
+169 0 M 0 22 D S
+450 0 M 0 22 D S
+731 0 M 0 22 D S
+1012 0 M 0 22 D S
+1294 0 M 0 22 D S
+1575 0 M 0 22 D S
+0 0 M 0 11 D S
+56 0 M 0 11 D S
+112 0 M 0 11 D S
+169 0 M 0 11 D S
+225 0 M 0 11 D S
+281 0 M 0 11 D S
+338 0 M 0 11 D S
+394 0 M 0 11 D S
+450 0 M 0 11 D S
+506 0 M 0 11 D S
+562 0 M 0 11 D S
+619 0 M 0 11 D S
+675 0 M 0 11 D S
+731 0 M 0 11 D S
+788 0 M 0 11 D S
+844 0 M 0 11 D S
+900 0 M 0 11 D S
+956 0 M 0 11 D S
+1012 0 M 0 11 D S
+1069 0 M 0 11 D S
+1125 0 M 0 11 D S
+1181 0 M 0 11 D S
+1238 0 M 0 11 D S
+1294 0 M 0 11 D S
+1350 0 M 0 11 D S
+1406 0 M 0 11 D S
+1462 0 M 0 11 D S
+1519 0 M 0 11 D S
+1575 0 M 0 11 D S
+1631 0 M 0 11 D S
+1688 0 M 0 11 D S
+1744 0 M 0 11 D S
+1800 0 M 0 11 D S
+/PSL_A0_y PSL_AO0 PSL_TL1 PSL_AO0 mul 0 gt {PSL_TL1 add} if PSL_AO0 0 gt {PSL_sign 0 lt {PSL_AH0} {0} ifelse add} if PSL_sign mul def
+/PSL_A1_y PSL_A0_y abs PSL_AO1 add PSL_sign 0 lt {PSL_AH1} {PSL_AH0} ifelse add PSL_sign mul def
+/PSL_L_y PSL_A1_y abs PSL_LO add PSL_sign 0 lt {PSL_LH} {PSL_AH1} ifelse add PSL_sign mul def
+0 -600 T
+S 0 A
+PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
+0 setlinecap
+0 setlinejoin
+3.32551 setmiterlimit
+
+%% PostScript produced by:
+%%GMT:  psxy -JX6i/2i -R-40/120/-1/1 s2.xy -O -K -W4/0/0/205
+%%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
+S 4 W
+S 0 0 0.804 C
+0 304 M
+1 0 D
+1 -1 D
+8 0 D
+1 -1 D
+26 0 D
+1 1 D
+12 0 D
+1 1 D
+6 0 D
+2 1 D
+5 0 D
+1 1 D
+4 0 D
+1 1 D
+2 0 D
+1 1 D
+3 0 D
+2 1 D
+2 0 D
+1 1 D
+3 0 D
+1 1 D
+3 0 D
+1 1 D
+6 0 D
+1 1 D
+12 0 D
+1 -1 D
+6 0 D
+1 -1 D
+3 0 D
+1 -1 D
+5 0 D
+1 -1 D
+5 0 D
+1 -1 D
+20 0 D
+1 1 D
+8 0 D
+1 1 D
+12 0 D
+2 -1 D
+4 0 D
+1 -1 D
+3 0 D
+2 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+3 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+3 0 D
+1 -1 D
+3 0 D
+1 -1 D
+5 0 D
+1 -1 D
+7 0 D
+1 -1 D
+8 0 D
+1 -1 D
+4 0 D
+2 -1 D
+3 0 D
+1 -1 D
+2 0 D
+1 -1 D
+3 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+4 0 D
+1 -1 D
+3 0 D
+1 -1 D
+4 0 D
+1 -1 D
+6 0 D
+1 -1 D
+6 0 D
+2 -1 D
+9 0 D
+1 -1 D
+30 0 D
+1 -1 D
+8 0 D
+1 -1 D
+4 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+2 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+2 -1 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+2 -1 D
+1 0 D
+2 -2 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+2 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+2 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+2 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+3 0 D
+1 -1 D
+3 0 D
+1 -1 D
+6 0 D
+1 1 D
+2 0 D
+1 1 D
+2 0 D
+2 2 D
+1 0 D
+1 1 D
+1 2 D
+2 2 D
+1 2 D
+3 3 D
+1 2 D
+1 3 D
+1 2 D
+1 3 D
+1 2 D
+1 3 D
+2 4 D
+2 6 D
+3 12 D
+1 5 D
+2 4 D
+4 20 D
+1 6 D
+1 5 D
+1 6 D
+2 6 D
+1 6 D
+1 7 D
+1 6 D
+4 28 D
+2 7 D
+2 14 D
+1 8 D
+2 14 D
+1 8 D
+1 7 D
+2 8 D
+2 14 D
+1 8 D
+4 28 D
+1 6 D
+2 7 D
+5 30 D
+1 5 D
+2 5 D
+1 5 D
+4 16 D
+2 6 D
+2 3 D
+2 4 D
+4 4 D
+3 0 D
+3 -3 D
+3 -6 D
+2 -6 D
+2 -3 D
+3 -12 D
+4 -20 D
+2 -6 D
+2 -12 D
+1 -7 D
+1 -6 D
+2 -14 D
+2 -7 D
+1 -7 D
+1 -8 D
+1 -7 D
+1 -8 D
+1 -7 D
+2 -16 D
+2 -7 D
+4 -32 D
+1 -7 D
+2 -16 D
+2 -7 D
+1 -8 D
+2 -14 D
+1 -8 D
+3 -21 D
+2 -6 D
+1 -7 D
+2 -12 D
+1 -7 D
+1 -5 D
+2 -12 D
+1 -5 D
+2 -6 D
+2 -10 D
+1 -4 D
+2 -10 D
+1 -4 D
+2 -4 D
+2 -8 D
+1 -3 D
+1 -4 D
+2 -6 D
+1 -4 D
+2 -2 D
+3 -9 D
+2 -4 D
+1 -3 D
+1 -2 D
+2 -2 D
+1 -2 D
+1 -1 D
+2 -4 D
+1 -1 D
+1 -2 D
+1 -1 D
+1 -2 D
+2 -1 D
+7 -7 D
+2 0 D
+2 -2 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+4 0 D
+1 -1 D
+6 0 D
+1 1 D
+3 0 D
+1 1 D
+2 0 D
+2 1 D
+1 0 D
+2 2 D
+1 0 D
+3 3 D
+2 1 D
+7 7 D
+1 2 D
+2 1 D
+1 1 D
+1 2 D
+2 2 D
+1 2 D
+3 3 D
+1 2 D
+1 1 D
+2 4 D
+1 1 D
+2 4 D
+3 3 D
+4 8 D
+1 1 D
+1 2 D
+2 2 D
+3 6 D
+1 1 D
+4 8 D
+2 1 D
+3 6 D
+1 1 D
+1 2 D
+3 3 D
+1 2 D
+1 1 D
+1 2 D
+2 2 D
+1 2 D
+2 2 D
+2 1 D
+1 2 D
+5 5 D
+2 1 D
+1 1 D
+1 0 D
+3 3 D
+1 0 D
+1 1 D
+2 1 D
+1 0 D
+1 1 D
+1 0 D
+2 2 D
+2 0 D
+2 1 D
+1 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+1 1 D
+3 0 D
+1 1 D
+3 0 D
+1 1 D
+2 0 D
+2 1 D
+2 0 D
+1 1 D
+2 0 D
+1 1 D
+3 0 D
+1 1 D
+1 0 D
+1 1 D
+2 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+2 1 D
+1 1 D
+1 0 D
+2 2 D
+1 0 D
+1 1 D
+2 1 D
+6 6 D
+1 2 D
+1 1 D
+2 1 D
+1 2 D
+1 1 D
+1 2 D
+1 1 D
+2 4 D
+2 1 D
+5 10 D
+1 3 D
+1 2 D
+2 2 D
+1 3 D
+2 4 D
+1 3 D
+1 2 D
+1 3 D
+1 2 D
+2 3 D
+1 3 D
+1 2 D
+2 6 D
+1 2 D
+1 3 D
+1 2 D
+2 3 D
+1 2 D
+1 3 D
+1 2 D
+1 3 D
+2 4 D
+1 3 D
+1 2 D
+2 2 D
+2 4 D
+1 1 D
+1 2 D
+1 1 D
+1 2 D
+2 1 D
+4 4 D
+1 0 D
+1 1 D
+4 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+6 -6 D
+5 -10 D
+2 -2 D
+1 -3 D
+1 -2 D
+2 -6 D
+1 -2 D
+2 -6 D
+1 -4 D
+2 -3 D
+2 -6 D
+1 -4 D
+2 -6 D
+1 -4 D
+2 -3 D
+1 -4 D
+1 -3 D
+2 -8 D
+1 -3 D
+1 -4 D
+1 -3 D
+2 -3 D
+1 -4 D
+1 -3 D
+1 -4 D
+2 -6 D
+1 -4 D
+2 -6 D
+2 -3 D
+2 -6 D
+1 -2 D
+2 -6 D
+1 -2 D
+2 -3 D
+7 -14 D
+7 -7 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 1 D
+2 0 D
+2 2 D
+2 1 D
+2 2 D
+1 2 D
+1 1 D
+3 6 D
+1 3 D
+2 2 D
+5 15 D
+1 4 D
+2 4 D
+1 3 D
+2 8 D
+1 5 D
+1 4 D
+1 5 D
+1 4 D
+1 5 D
+2 5 D
+6 30 D
+2 5 D
+1 5 D
+1 6 D
+5 25 D
+2 4 D
+2 10 D
+5 20 D
+2 3 D
+1 4 D
+2 6 D
+2 4 D
+1 3 D
+6 6 D
+4 0 D
+1 -1 D
+2 -1 D
+1 -2 D
+1 -1 D
+2 -4 D
+1 -3 D
+1 -2 D
+2 -3 D
+1 -4 D
+1 -3 D
+1 -4 D
+1 -3 D
+1 -4 D
+1 -5 D
+1 -4 D
+2 -5 D
+1 -4 D
+4 -20 D
+1 -6 D
+2 -10 D
+2 -6 D
+1 -5 D
+1 -6 D
+2 -10 D
+1 -6 D
+1 -5 D
+2 -5 D
+1 -5 D
+1 -6 D
+1 -4 D
+3 -15 D
+2 -8 D
+2 -5 D
+1 -4 D
+1 -3 D
+2 -8 D
+2 -6 D
+2 -3 D
+1 -2 D
+1 -3 D
+4 -8 D
+5 -5 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+3 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+2 2 D
+2 1 D
+8 8 D
+2 1 D
+6 6 D
+2 1 D
+1 0 D
+2 2 D
+1 0 D
+1 1 D
+2 0 D
+2 1 D
+6 0 D
+1 -1 D
+3 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+2 -1 D
+1 -1 D
+1 0 D
+2 -2 D
+1 0 D
+2 -2 D
+1 0 D
+2 -1 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+2 -1 D
+5 0 D
+1 -1 D
+1 1 D
+5 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+2 1 D
+1 0 D
+6 6 D
+2 1 D
+5 5 D
+1 2 D
+2 2 D
+2 1 D
+1 2 D
+2 2 D
+1 2 D
+1 1 D
+1 2 D
+2 1 D
+1 1 D
+1 2 D
+2 2 D
+1 2 D
+2 2 D
+2 1 D
+1 2 D
+4 4 D
+1 2 D
+2 2 D
+2 1 D
+3 3 D
+1 0 D
+2 2 D
+2 1 D
+1 1 D
+1 0 D
+2 2 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+4 0 D
+1 1 D
+4 0 D
+1 1 D
+18 0 D
+2 1 D
+12 0 D
+1 1 D
+6 0 D
+1 1 D
+4 0 D
+1 1 D
+6 0 D
+1 1 D
+16 0 D
+1 -1 D
+4 0 D
+2 -1 D
+3 0 D
+1 -1 D
+2 0 D
+2 -1 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 0 D
+2 -1 D
+3 0 D
+1 -1 D
+15 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+2 0 D
+3 3 D
+1 0 D
+2 2 D
+2 1 D
+6 6 D
+1 2 D
+1 1 D
+2 1 D
+2 2 D
+1 2 D
+3 3 D
+1 2 D
+2 1 D
+2 2 D
+1 2 D
+12 12 D
+2 1 D
+3 3 D
+1 0 D
+2 2 D
+1 0 D
+2 1 D
+1 0 D
+1 1 D
+10 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 -1 D
+1 0 D
+5 -5 D
+1 -2 D
+2 -1 D
+1 -1 D
+1 -2 D
+1 -1 D
+2 -4 D
+1 -1 D
+1 -2 D
+2 -2 D
+5 -10 D
+1 -3 D
+1 -2 D
+2 -2 D
+1 -2 D
+1 -3 D
+2 -4 D
+1 -3 D
+1 -2 D
+1 -3 D
+1 -2 D
+2 -2 D
+1 -3 D
+2 -4 D
+1 -3 D
+2 -4 D
+1 -3 D
+2 -2 D
+3 -6 D
+1 -3 D
+1 -2 D
+3 -3 D
+3 -6 D
+1 -1 D
+1 -2 D
+1 -1 D
+1 -2 D
+2 -1 D
+5 -5 D
+1 0 D
+1 -1 D
+2 0 D
+1 -1 D
+7 0 D
+2 1 D
+1 0 D
+6 6 D
+2 1 D
+2 2 D
+1 2 D
+2 2 D
+1 2 D
+3 3 D
+1 2 D
+1 1 D
+1 2 D
+1 1 D
+2 4 D
+2 1 D
+2 4 D
+1 1 D
+1 2 D
+1 1 D
+2 4 D
+2 1 D
+1 1 D
+1 2 D
+1 1 D
+1 2 D
+3 3 D
+2 1 D
+7 7 D
+1 0 D
+2 1 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+3 0 D
+1 1 D
+4 0 D
+1 1 D
+20 0 D
+2 -1 D
+9 0 D
+1 -1 D
+5 0 D
+1 -1 D
+5 0 D
+1 -1 D
+2 0 D
+2 -1 D
+3 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+2 -1 D
+2 0 D
+1 -1 D
+1 0 D
+1 -1 D
+1 0 D
+1 -1 D
+3 0 D
+1 -1 D
+2 0 D
+1 -1 D
+15 0 D
+1 1 D
+2 0 D
+1 1 D
+1 0 D
+2 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+2 1 D
+1 0 D
+2 2 D
+1 0 D
+2 2 D
+2 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+1 0 D
+1 1 D
+3 0 D
+1 1 D
+2 0 D
+1 1 D
+8 0 D
+S
+S 0 A
+PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
+0 setlinecap
+0 setlinejoin
+3.32551 setmiterlimit
+
+%% PostScript produced by:
+%%GMT:  pstext -JX6i/2i -R-40/120/-1/1 -N -O -K -P -G205/0/0
+%%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
+S 0 W
+S 0 A
+PSL_font_encode 1 get 0 eq {Standard+_Encoding /Helvetica-Bold /Helvetica-Bold PSL_reencode PSL_font_encode 1 1 put} if
+S 0.804 0 0 C
+0 690 M 50 F1 (Red: Azimuth range 40-44 deg \(stacksacallaz\)) Z
+S 0 A
+PSL_font_encode 0 get 0 eq {Standard+_Encoding /Helvetica /Helvetica PSL_reencode PSL_font_encode 0 1 put} if
+0 setlinecap
+0 setlinejoin
+3.32551 setmiterlimit
+
+%% PostScript produced by:
+%%GMT:  pstext -JX6i/2i -R-40/120/-1/1 -N -O -P -G0/0/205
+%%PROJ: xy -40.00000000 120.00000000 -1.00000000 1.00000000 -40.000 120.000 -1.000 1.000 +xy +a=6378137.000 +b=6356752.314245
+S 0 W
+S 0 A
+PSL_font_encode 1 get 0 eq {Standard+_Encoding /Helvetica-Bold /Helvetica-Bold PSL_reencode PSL_font_encode 1 1 put} if
+S 0 0 0.804 C
+0 630 M 50 F1 (Blue: Azimuth range 44-48 deg \(stacksacallaz\)) Z
+%%PageTrailer
+S -0 -0 T 4.16667 4.16667 scale 0 A
+showpage
+
+%%Trailer
+
+end
+%%EOF
