@@ -1,0 +1,9 @@
+# Ignore the following executable files in updates
+amp2sac
+sac2xy
+sac2xyfill
+sachead
+stacksac
+stacksacall
+stacksacallaz
+xy2sac
