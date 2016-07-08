@@ -1,11 +1,17 @@
 SACTOOLS
 #------------------------------------------------------------------------------------#
-A series of command line tools that interact with Seismic Analysis Code (SAC)
-formatted files.  These are just some rather basic tools to do some routine things
-on seismograms that I have found useful over the past several years.
+This is a group of stand-alone tools that act on Seismic Analysis Code (SAC)
+formatted files.  This group of tools deals with conversion of SAC files back and
+forth between SAC and ASCII files, retrieving header information from SAC files
+on the command line, and same basic tasks such as stacking files.
 
-Here I provide a *very* brief description of the utilities included in this repository.
-For more details on the use of these utilities see the 'examples' directory.
+In this README I provide a *very* brief description of the utilities included 
+in this repository.  For more details on the use of these utilities see the 
+examples in the './examples' directory. The examples directory includes a few
+SAC formatted files and some C-shell scripts that can be used to test that the
+programs are working.
+
+Author:  Michael Thorne (michael.thorne@utah.edu)
 #------------------------------------------------------------------------------------#
 
 
@@ -22,9 +28,10 @@ For more details on the use of these utilities see the 'examples' directory.
 
 5) stacksac (stacksac.f90) - linearly stack some SAC files.
 
-6) stacksacall - take a group of SAC files and stack them in epicentral distance bins.
+6) stacksacall (stacksacall.f90) - takes a group of SAC files and stacks them in 
+                                   epicentral distance bins.
 
-7) stacksacallaz - Stack a group of SAC files in azimuth bins.
+7) stacksacallaz (stacksacallaz.f90) - Stack a group of SAC files in azimuth bins.
 
 8) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
                          file.
@@ -36,17 +43,18 @@ For more details on the use of these utilities see the 'examples' directory.
                     writing SAC files
 
 
-# Existing codes slated to be added to the repository
+# This is just a listing of codes that I already have that I will be adding to
+# this repository.  Mostly, this is just for my accounting purposes.
 #------------------------------------------------------------------------------------#
-1) mavg - computes moving average on a SAC file
-2) mergesac - merges multiple SAC files into a single file
-3) padsac - pads two SAC files with zeros to start and end at the same time
-4) peaks - finds peaks in SAC files
-5) rmserror - calculates RMS misfit between 2 SAC files
-6) sacmax - finds maximum/minimum amplitudes (and corresponding times) within a set
-            time window in a SAC file.
-7) sacsnr - determines a signal to noise ratio of a SAC file
-8) sacunused - sets 'unused' header variables in SAC
-9) stalta - computes STA/LTA of a SAC file
-10) xcorr - time domain cross-correlation between SAC files
-11) convolve - convolve basic functions with a SAC file
+1)  mavg      - computes moving average on a SAC file.
+2)  mergesac  - merges multiple SAC files into a single file.
+3)  padsac    - pads two SAC files with zeros to start and end at the same time.
+4)  peaks     - finds peaks in SAC files.
+5)  rmserror  - calculates RMS misfit between 2 SAC files.
+6)  sacmax    - finds maximum/minimum amplitudes (and corresponding times) within a set
+                time window in a SAC file.
+7)  sacsnr    - determines a signal to noise ratio of a SAC file.
+8)  sacunused - sets 'unused' header variables in SAC.
+9)  stalta    - computes STA/LTA of a SAC file.
+10) xcorr     - time domain cross-correlation between SAC files.
+11) convolve  - convolve basic functions with a SAC file.
