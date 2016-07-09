@@ -1,0 +1,3 @@
+#Ignore the compiled module files
+mod_sac_io.o
+sac_i_o.mod
