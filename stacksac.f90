@@ -1,7 +1,10 @@
 PROGRAM sacstacking
-!USE F90_UNIX_ENV
-!Performs simple linear stacking of SAC formatted files listed
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
+! Performs simple linear stacking of SAC formatted files listed
 ! in the input file
+!
+! michael.thorne@utah.edu
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 USE sac_i_o
 IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: dinput, stacked
@@ -13,7 +16,7 @@ INTEGER(KIND=4), PARAMETER :: maxrecs = 1000
 CHARACTER(LEN=112) :: file1, junk
 CHARACTER(LEN=112) :: file2, ofile
 
-!    --  R E A D  U S E R  I N P U T  --
+!    --  READ USER INPUT  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 1) THEN
@@ -33,7 +36,7 @@ ENDIF
 write(*,*) "Stacking SAC files in list '", TRIM(adjustl(file1)), "' ..."
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
-!    -- F I N D   T O T A L   #   O F   F I L E S
+!    -- FIND TOTAL # OF FILES
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NR = 0
 OPEN(UNIT=1,FILE=file1)
@@ -47,7 +50,7 @@ write(*,*) "Stacking ", NR, " SAC files..."
 REWIND(1)
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
-!    --  R E A D   I N P U T  S A C  F I L E S  A N D  S T A C K --
+!    --  READ INPUT SAC FILES AND STACK --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 DO J=1,NR
 
@@ -105,10 +108,10 @@ DO J=1,NR
   ENDIF
 
 ENDDO
-stacked = stacked/NR
+stacked = stacked/REAL(NR)
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
-!    --  W R I T E   O U T   S T A C K  --
+!    --  WRITE OUT STACK  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !Initialize sac file
@@ -129,9 +132,6 @@ ofile ='stacked.sac'
 delta =delta1
 depmin =MINVAL(stacked)
 depmax =MAXVAL(stacked)
-!b =-(float(npts1-1))*delta
-!e =(float(npts1-1))*delta
-!npts =((npts1-1)*2+1)
 b = b1
 e = e1
 npts = npts1

@@ -1,5 +1,9 @@
 PROGRAM header
-!USE F90_UNIX_ENV
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
+! Retrieve SAC header values
+!
+! michael.thorne@utah.edu
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 USE sac_i_o
 IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: sacfile
@@ -7,7 +11,7 @@ INTEGER(KIND=4)  :: NN, ios, J
 CHARACTER(LEN=112) :: file1, variable
 
 
-!    --  R E A D  U S E R  I N P U T  --
+!    --  READ USER INPUT  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 2) THEN
@@ -28,7 +32,7 @@ CLOSE(1)
 
 CALL GETARG(2,variable)
                                                                                 
-!    --  R E A D   I N P U T  S A C  F I L E S  --
+!    --  READ INPUT SAC FILES  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 !read file1
 CALL rbsac(file1,delta,depmin,depmax,scale,odelta,b,e,o,a,internal1,         &
@@ -50,7 +54,7 @@ IF (nvhdr /= 6) THEN
   STOP
 ENDIF
 
-!    --  W R I T E  S A C  V A R I A B L E  --
+!    --  WRITE SAC VARIABLE  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
   IF (variable == 'delta' .OR. variable == 'DELTA') THEN
     write(*,96)   "DELTA= ", delta

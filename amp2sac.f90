@@ -1,5 +1,9 @@
 PROGRAM ampsac
-!Convert single column of amplitude values to SAC file
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
+! Convert single column of amplitude values to SAC file
+!
+! michael.thorne@utah.edu
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 USE sac_i_o
 IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: amps, dummy
@@ -11,7 +15,7 @@ CHARACTER(LEN=12) :: deltastr
 CHARACTER(LEN=1) :: junk
 
 
-!    --  R E A D  U S E R  I N P U T  --
+!    --  READ USER INPUT  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 2) THEN
@@ -70,7 +74,7 @@ ENDDO
 CLOSE(1)
 
 
-!    --  W R I T E  O U T P U T  S A C F I L E  --
+!    --  WRITE OUTPUT SAC FILE  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !Initialize sac file

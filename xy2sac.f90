@@ -1,7 +1,9 @@
 PROGRAM xysac
-!Convert xy table to SAC file
-!by Michael Thorne
-!USE F90_UNIX_ENV
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
+! Convert x,y table to SAC file
+!
+! michael.thorne@utah.edu
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 USE sac_i_o
 IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: amps, times, dummy
@@ -12,7 +14,7 @@ CHARACTER(LEN=112) :: xytable, osacfile, ofile
 CHARACTER(LEN=1) :: junk
 
 
-!    --  R E A D  U S E R  I N P U T  --
+!    --  READ USER INPUT  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 2) THEN
@@ -37,7 +39,7 @@ write(*,*) "Writing XY file: '", TRIM(adjustl(xytable)), "' to SAC file: '", &
            & TRIM(adjustl(osacfile)), "' ..."
 
 
-!    --  R E A D   I N P U T  X-Y  T A B L E  --
+!    --  READ INPUT X-Y TABLE  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !Determine total number of lines in file
@@ -66,7 +68,7 @@ ENDDO
 CLOSE(1)
 
 
-!    --  W R I T E  O U T P U T  S A C F I L E  --
+!    --  WRITE OUTPUT SAC FILE  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !Initialize sac file

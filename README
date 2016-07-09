@@ -42,6 +42,10 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 1) mod_sac_io.f90 - authored by Nicholas Schmerr. Fortran module for reading/
                     writing SAC files
 
+# To Do
+#------------------------------------------------------------------------------------#
+1) better handling of reversed byte-order, swap bytes?
+
 
 # This is just a listing of codes that I already have that I will be adding to
 # this repository.  Mostly, this is just for my accounting purposes.

@@ -1,7 +1,9 @@
-PROGRAM xysac
-!Convert SAC file to XY table
-!by Michael Thorne
-!USE F90_UNIX_ENV
+PROGRAM sactoxy
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
+! Convert SAC file to XY table
+!
+! michael.thorne@utah.edu
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 USE sac_i_o
 IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: sacfile
@@ -10,7 +12,7 @@ INTEGER(KIND=4)    :: NN, ios, npts1, J
 CHARACTER(LEN=112) :: file1, ofile
 
 
-!    --  R E A D  U S E R  I N P U T  --
+!    --  READ USER INPUT  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 2) THEN
@@ -35,7 +37,7 @@ write(*,*) "Writing SAC file: '", TRIM(adjustl(file1)), "' to XY file: '", &
            & TRIM(adjustl(ofile)), "' ..."
 
 
-!    --  R E A D   I N P U T  S A C  F I L E S  --
+!    --  READ INPUT SAC FILES  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !read file1
@@ -58,7 +60,7 @@ IF (nvhdr /= 6) THEN
   STOP
 ENDIF
 
-!    --  W R I T E  O U T P U T  S A C F I L E  --
+!    --  WRITE OUTPUT SACFILE  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 OPEN(UNIT=2,FILE=ofile)
@@ -69,4 +71,4 @@ ENDDO
 CLOSE(2)
 
 
-END PROGRAM xysac
+END PROGRAM sactoxy
