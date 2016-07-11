@@ -28,7 +28,7 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 
 5) stacksac (stacksac.f90) - linearly stack some SAC files.
 
-6) stacksacall (stacksacall.f90) - takes a group of SAC files and stacks them in 
+6) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
                                    epicentral distance bins.
 
 7) stacksacallaz (stacksacallaz.f90) - Stack a group of SAC files in azimuth bins.

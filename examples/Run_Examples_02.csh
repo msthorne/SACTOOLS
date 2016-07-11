@@ -5,7 +5,7 @@
 # Plotting is done using the Generic Mapping Tools (GMT) package
 #
 # This script tests:
-# sachead, sac2xy, sac2xyfill, stacksac, stacksacall, stacksacallaz
+# sachead, sac2xy, sac2xyfill, stacksac, stacksacgc, stacksacallaz
 #
 #---------------------------------------------------------------------------------------#
 
@@ -48,9 +48,9 @@ psxy stacked.xy -JX -R -O -K -W6/0/0/0 -B25g10000f5/1g1000nSeW -Y2.75i >> Exampl
 rm stacked.sac stacked.xy
 #---------------------------------------------------------------------------------------#
 
-# Test stacksacall
+# Test stacksacgc
 #---------------------------------------------------------------------------------------#
-../bin/stacksacall flist 70. 72. 1.
+../bin/stacksacgc flist 70. 72. 1.
 ../bin/sac2xy stacked_001.sac s1.xy
 ../bin/sac2xy stacked_002.sac s2.xy
 
@@ -61,10 +61,10 @@ pstext -JX -R -N -O -K -P -G0/0/0 << eof >> Examples_02.ps
 -40 1.5 12 0 1 1 Black:  All files stacked (stacksac)
 eof
 pstext -JX -R -N -O -K -P -G205/0/0 << eof >> Examples_02.ps
--40 1.3 12 0 1 1 Red: Distance range 70-71 deg (stacksacall)
+-40 1.3 12 0 1 1 Red: Distance range 70-71 deg (stacksacgc)
 eof
 pstext -JX -R -N -O -K -P -G0/0/205 << eof >> Examples_02.ps
--40 1.1 12 0 1 1 Blue: Distance range 71-72 deg (stacksacall)
+-40 1.1 12 0 1 1 Blue: Distance range 71-72 deg (stacksacgc)
 eof
 
 rm s1.xy s2.xy

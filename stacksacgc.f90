@@ -1,4 +1,4 @@
-PROGRAM sacstacking
+PROGRAM stackgc
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 !Performs simple linear stacking of SAC formatted files listed
 ! in the input file
@@ -218,4 +218,4 @@ ENDDO
 
 
 
-END PROGRAM sacstacking
+END PROGRAM stackgc
