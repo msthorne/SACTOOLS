@@ -1,4 +1,4 @@
-PROGRAM sacstacking
+PROGRAM stackaz
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 ! Performs simple linear stacking of SAC formatted files listed
 ! in the input file.  Sorts files based on azimuth bins.
@@ -216,4 +216,4 @@ ENDDO
 
 
 
-END PROGRAM sacstacking
+END PROGRAM stackaz

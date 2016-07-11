@@ -113,6 +113,4 @@ kt2,kt3,kt4,kt5,kt6,kt7,kt8,kt9,kf,kuser0,kuser1,kuser2,kcmpnm,knetwk,kdatrd,&
 kinst,amps)
 
 
-
-
 END PROGRAM ampsac
