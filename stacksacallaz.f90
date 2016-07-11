@@ -1,7 +1,7 @@
 PROGRAM sacstacking
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 ! Performs simple linear stacking of SAC formatted files listed
-! in the input file
+! in the input file.  Sorts files based on azimuth bins.
 !
 ! michael.thorne@utah.edu
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
@@ -14,9 +14,9 @@ INTEGER(KIND=4), DIMENSION(:), ALLOCATABLE :: counter
 REAL(KIND=4)       :: delta1, delta2, b1, b2, e1, e2
 REAL(KIND=4)       :: mindist, maxdist, dbin
 REAL(KIND=4)       :: binmin, binmax
-INTEGER(KIND=4)    :: NN, ios, npts1, npts2, J, KL
+INTEGER(KIND=4)    :: NN, ios, npts1, npts2, npts3, J, KL
 INTEGER(KIND=4)    :: NR, BINS
-INTEGER(KIND=4), PARAMETER :: maxrecs = 1000
+INTEGER(KIND=4), PARAMETER :: maxrecs = 10000
 CHARACTER(LEN=112) :: file1, junk
 CHARACTER(LEN=112) :: file2, ofile
 CHARACTER(LEN=3) :: istr
@@ -119,7 +119,7 @@ DO J=1,NR
   ENDIF
 
   IF (nvhdr /= 6) THEN  !Check Header Version
-    write(*,*) "ERROR - File: '", TRIM(adjustl(file1)), "' appears to be of non-native &
+    write(*,*) "ERROR - File: '", TRIM(adjustl(file2)), "' appears to be of non-native &
     &byte-order or is not a SAC file."
     STOP
   ENDIF
@@ -129,16 +129,27 @@ DO J=1,NR
     STOP
   ENDIF
 
-  IF (npts1 /= npts2 .AND. J > 1) THEN  !Check vector lengths
-    write(*,*) "ERROR - Input files are not equal length ..."
-    !STOP
+  !IF (npts1 /= npts2 .AND. J > 1) THEN  !Check vector lengths
+  !  write(*,*) "ERROR - Input files are not equal length ..."
+  !  !STOP
+  !ENDIF
+  npts3 = npts1
+  IF (npts2 > npts1 .AND. J > 1) THEN !SAC file has more samples
+    write(*,*) "WARNING: Input file '", TRIM(adjustl(file2)), "' is not equal &
+               &length.  File has a larger number of samples. Truncating file..."
+  ELSEIF (npts2 < npts1 .AND. J > 1) THEN
+    write(*,*) "WARNING: Input file '", TRIM(adjustl(file2)), "' is not equal &
+               &length.  File has a smaller number of samples. Padding end with&
+               &zeros ..."
+    npts3 = npts2
   ENDIF
 
   binmin = mindist
   binmax = mindist + dbin
   DO KL = 1,BINS
     IF (az >= binmin .AND. az <= binmax) THEN
-      stacked(KL,1:npts1) = stacked(KL,1:npts1) + dinput(1:npts1) 
+      !stacked(KL,1:npts1) = stacked(KL,1:npts1) + dinput(1:npts1) 
+      stacked(KL,1:npts3) = stacked(KL,1:npts3) + dinput(1:npts3) 
       counter(KL) = counter(KL) + 1
       distances(KL) = distances(KL) + az 
     ENDIF
