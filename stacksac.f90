@@ -12,7 +12,7 @@ REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: dummy
 REAL(KIND=4)       :: delta1, delta2, b1, b2, e1, e2
 INTEGER(KIND=4)    :: NN, ios, npts1, npts2, npts3, J
 INTEGER(KIND=4)    :: NR
-INTEGER(KIND=4), PARAMETER :: maxrecs = 1000
+INTEGER(KIND=4), PARAMETER :: maxrecs = 10000
 CHARACTER(LEN=112) :: file1, junk
 CHARACTER(LEN=112) :: file2, ofile
 
@@ -94,11 +94,6 @@ DO J=1,NR
     write(*,*) "ERROR - Input files contain unequal sample rates ..."
     STOP
   ENDIF
-
-  !IF (npts1 /= npts2 .AND. J > 1) THEN  !Check vector lengths
-  !  write(*,*) "WARNING: Input files are not equal length ..."
-  !  !STOP
-  !ENDIF
 
   npts3 = npts1
   IF (npts2 > npts1 .AND. J > 1) THEN !SAC file has more samples
