@@ -10,7 +10,7 @@ IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: dinput, stacked
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: dummy
 REAL(KIND=4)       :: delta1, delta2, b1, b2, e1, e2
-INTEGER(KIND=4)    :: NN, ios, npts1, npts2, J
+INTEGER(KIND=4)    :: NN, ios, npts1, npts2, npts3, J
 INTEGER(KIND=4)    :: NR
 INTEGER(KIND=4), PARAMETER :: maxrecs = 1000
 CHARACTER(LEN=112) :: file1, junk
@@ -85,7 +85,7 @@ DO J=1,NR
   ENDIF
 
   IF (nvhdr /= 6) THEN  !Check Header Version
-    write(*,*) "ERROR - File: '", TRIM(adjustl(file1)), "' appears to be of non-native &
+    write(*,*) "ERROR - File: '", TRIM(adjustl(file2)), "' appears to be of non-native &
     &byte-order or is not a SAC file."
     STOP
   ENDIF
@@ -95,16 +95,27 @@ DO J=1,NR
     STOP
   ENDIF
 
-  IF (npts1 /= npts2 .AND. J > 1) THEN  !Check vector lengths
-    write(*,*) "ERROR - Input files are not equal length ..."
-    STOP
+  !IF (npts1 /= npts2 .AND. J > 1) THEN  !Check vector lengths
+  !  write(*,*) "WARNING: Input files are not equal length ..."
+  !  !STOP
+  !ENDIF
+
+  npts3 = npts1
+  IF (npts2 > npts1 .AND. J > 1) THEN !SAC file has more samples
+    write(*,*) "WARNING: Input file '", TRIM(adjustl(file2)), "' is not equal &
+               &length.  File has a larger number of samples. Truncating file..." 
+  ELSEIF (npts2 < npts1 .AND. J > 1) THEN
+    write(*,*) "WARNING: Input file '", TRIM(adjustl(file2)), "' is not equal &
+               &length.  File has a smaller number of samples. Padding end with&
+               &zeros ..." 
+    npts3 = npts2
   ENDIF
 
   IF (J == 1) THEN
     ALLOCATE(stacked(npts1))
-    stacked = dinput
+    stacked(1:npts1) = dinput(1:npts1)
   ELSE
-    stacked = stacked + dinput 
+    stacked(1:npts3) = stacked(1:npts3) + dinput(1:npts3) 
   ENDIF
 
 ENDDO
