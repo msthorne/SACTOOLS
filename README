@@ -20,21 +20,25 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 1) amp2sac (amp2sac.f90) - takes a column of amplitude values in ASCII and converts
                            these to SAC format.
 
-2) sac2xy (sac2xy.f90) - converts a SAC file into an x,y table of time and amplitude.
+2) mavg (mavg.f90) - computes a n-point moving average on a SAC file.
 
-3) sac2xyfill (sac2xyfill.f90) - same as sac2xy but fills in the positive amplitudes.
+3) sac2xy (sac2xy.f90) - converts a SAC file into an x,y table of time and amplitude.
 
-4) sachead (sachead.f90) - return the value of a SAC header variable.
+4) sac2xyfill (sac2xyfill.f90) - same as sac2xy but fills in the positive amplitudes.
 
-5) stacksac (stacksac.f90) - linearly stack some SAC files.
+5) sachead (sachead.f90) - return the value of a SAC header variable.
 
-6) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
+6) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
+
+7) stacksac (stacksac.f90) - linearly stack some SAC files.
+
+8) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
                                    epicentral distance bins.
 
-7) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
+9) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
 
-8) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
-                         file.
+10) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
+                          file.
 
 
 # Modules included in the repository
@@ -49,15 +53,13 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 # This is just a listing of codes that I already have that I will be adding to
 # this repository.  Mostly, this is just for my accounting purposes.
 #------------------------------------------------------------------------------------#
-1)  mavg      - computes moving average on a SAC file.
-2)  mergesac  - merges multiple SAC files into a single file.
-3)  padsac    - pads two SAC files with zeros to start and end at the same time.
-4)  peaks     - finds peaks in SAC files.
-5)  rmserror  - calculates RMS misfit between 2 SAC files.
-6)  sacmax    - finds maximum/minimum amplitudes (and corresponding times) within a set
+1)  mergesac  - merges multiple SAC files into a single file.
+2)  padsac    - pads two SAC files with zeros to start and end at the same time.
+3)  peaks     - finds peaks in SAC files.
+4)  rmserror  - calculates RMS misfit between 2 SAC files.
+5)  sacmax    - finds maximum/minimum amplitudes (and corresponding times) within a set
                 time window in a SAC file.
-7)  sacsnr    - determines a signal to noise ratio of a SAC file.
-8)  sacunused - sets 'unused' header variables in SAC.
-9)  stalta    - computes STA/LTA of a SAC file.
-10) xcorr     - time domain cross-correlation between SAC files.
-11) convolve  - convolve basic functions with a SAC file.
+6)  sacsnr    - determines a signal to noise ratio of a SAC file.
+7)  stalta    - computes STA/LTA of a SAC file.
+8)  xcorr     - time domain cross-correlation between SAC files.
+9)  convolve  - convolve basic functions with a SAC file.
