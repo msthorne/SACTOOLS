@@ -28,16 +28,18 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 
 5) sachead (sachead.f90) - return the value of a SAC header variable.
 
-6) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
+6) sacsnr (sacsnr.f90) - compute estimate of signal to noise ratio in SAC file.
 
-7) stacksac (stacksac.f90) - linearly stack some SAC files.
+7) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
 
-8) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
+8) stacksac (stacksac.f90) - linearly stack some SAC files.
+
+9) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
                                    epicentral distance bins.
 
-9) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
+10) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
 
-10) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
+11) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
                           file.
 
 
@@ -59,7 +61,6 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 4)  rmserror  - calculates RMS misfit between 2 SAC files.
 5)  sacmax    - finds maximum/minimum amplitudes (and corresponding times) within a set
                 time window in a SAC file.
-6)  sacsnr    - determines a signal to noise ratio of a SAC file.
-7)  stalta    - computes STA/LTA of a SAC file.
-8)  xcorr     - time domain cross-correlation between SAC files.
-9)  convolve  - convolve basic functions with a SAC file.
+6)  stalta    - computes STA/LTA of a SAC file.
+7)  xcorr     - time domain cross-correlation between SAC files.
+8)  convolve  - convolve basic functions with a SAC file.
