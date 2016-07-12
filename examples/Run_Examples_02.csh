@@ -41,7 +41,7 @@ rm A.xy Afill.xy
 
 # Test stacksac
 #---------------------------------------------------------------------------------------#
-ls *.sac >! flist
+ls 201002090103*.sac >! flist
 ../bin/stacksac flist
 ../bin/sac2xy stacked.sac stacked.xy
 psxy stacked.xy -JX -R -O -K -W6/0/0/0 -B25g10000f5/1g1000nSeW -Y2.75i >> Examples_02.ps
