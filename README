@@ -31,7 +31,7 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 6) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
                                    epicentral distance bins.
 
-7) stacksacallaz (stacksacallaz.f90) - Stack a group of SAC files in azimuth bins.
+7) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
 
 8) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
                          file.
@@ -44,7 +44,6 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 
 # To Do
 #------------------------------------------------------------------------------------#
-1) better handling of reversed byte-order, swap bytes?
 
 
 # This is just a listing of codes that I already have that I will be adding to

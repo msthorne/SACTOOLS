@@ -5,7 +5,7 @@
 # Plotting is done using the Generic Mapping Tools (GMT) package
 #
 # This script tests:
-# sachead, sac2xy, sac2xyfill, stacksac, stacksacgc, stacksacallaz
+# sachead, sac2xy, sac2xyfill, stacksac, stacksacgc, stacksacaz
 #
 #---------------------------------------------------------------------------------------#
 
@@ -71,9 +71,9 @@ rm s1.xy s2.xy
 rm stacked_001.sac stacked_002.sac
 #---------------------------------------------------------------------------------------#
 
-# Test stacksacallaz
+# Test stacksacaz
 #---------------------------------------------------------------------------------------#
-../bin/stacksacallaz flist 40. 48. 4.
+../bin/stacksacaz flist 40. 48. 4.
 ../bin/sac2xy stacked_001.sac s1.xy
 ../bin/sac2xy stacked_002.sac s2.xy
 
@@ -81,10 +81,10 @@ psxy s1.xy -JX -R -O -K -W4/205/0/0 -B25g10000f5/1g1000nSeW -Y3.1i >> Examples_0
 psxy s2.xy -JX -R -O -K -W4/0/0/205 >> Examples_02.ps
 
 pstext -JX -R -N -O -K -P -G205/0/0 << eof >> Examples_02.ps
--40 1.3 12 0 1 1 Red: Azimuth range 40-44 deg (stacksacallaz)
+-40 1.3 12 0 1 1 Red: Azimuth range 40-44 deg (stacksacaz)
 eof
 pstext -JX -R -N -O -P -G0/0/205 << eof >> Examples_02.ps
--40 1.1 12 0 1 1 Blue: Azimuth range 44-48 deg (stacksacallaz)
+-40 1.1 12 0 1 1 Blue: Azimuth range 44-48 deg (stacksacaz)
 eof
 
 rm s1.xy s2.xy
