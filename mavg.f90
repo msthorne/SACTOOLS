@@ -1,4 +1,9 @@
 PROGRAM movingaverage
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
+! computes simple n-point moving average on a SAC file
+!
+! michael.thorne@utah.edu
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 USE sac_i_o
 IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: unfiltered, averaged
@@ -10,7 +15,7 @@ INTEGER(KIND=4) :: J, KK
 CHARACTER(LEN=112) :: ifile, ofile
 CHARACTER(LEN=4) :: input
 
-!    --  R E A D  U S E R  I N P U T  --
+!    --  READ USER INPUT  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 2) THEN
@@ -30,15 +35,19 @@ CALL GETARG(1, ifile)
   CLOSE(1) 
 
 CALL GETARG(2,input)
-  READ(input,*) navg
+READ(input,*) navg
+
+!If navg is given as an even number then make it odd
+IF (mod(navg,2) == 0) THEN
+  navg = navg + 1
+ENDIF
 
 write(*,*) "Smoothing File: ", TRIM(adjustl(ifile))
 write(*,*) "navg = ", navg
 
-!    --  R E A D   I N P U T  S A C  F I L E S  --
+!    -- READ INPUT SAC FILES  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
-!read file1
 CALL rbsac(ifile,delta,depmin,depmax,scale,odelta,b,e,o,a,internal1,         &
 t0,t1,t2,t3,t4,t5,t6,t7,t8,t9,f,resp0,resp1,resp2,resp3,resp4,resp5,resp6,   &
 resp7,resp8,resp9,stla,stlo,stel,stdp,evla,evlo,evel,evdp,mag,user0,user1,   &
@@ -76,7 +85,7 @@ ENDDO
 
 
 
-!    --  S T E P  8)  W R I T E  O U T  D E S P I K E D  F I L E  --
+!    --  WRITE OUT MOVING AVERAGED FILE --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !change pertinent header variables

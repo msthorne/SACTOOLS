@@ -3,7 +3,7 @@
 
 # Test mavg
 #---------------------------------------------------------------------------------------#
-../bin/mavg apollostat14_envelope.sac 51
+../bin/mavg apollostat14_envelope.sac 50
 
 ../bin/sac2xy apollostat14_envelope.sac original.xy
 ../bin/sac2xy mavg_apollostat14_envelope.sac envelope.xy
