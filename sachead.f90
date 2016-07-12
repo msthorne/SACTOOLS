@@ -176,6 +176,40 @@ ENDIF
     write(*,96)   "YMINIMUM= ", yminimum
   ELSEIF (variable == 'ymaximum' .OR. variable == 'YMAXIMUM') THEN
     write(*,96)   "YMAXIMUM= ", ymaximum
+  ELSEIF (variable == 'unused1' .OR. variable == 'UNUSED1') THEN
+    write(*,96)   "UNUSED1= ", unused1
+  ELSEIF (variable == 'unused2' .OR. variable == 'UNUSED2') THEN
+    write(*,96)   "UNUSED2= ", unused2
+  ELSEIF (variable == 'unused3' .OR. variable == 'UNUSED3') THEN
+    write(*,96)   "UNUSED3= ", unused3
+  ELSEIF (variable == 'unused4' .OR. variable == 'UNUSED4') THEN
+    write(*,96)   "UNUSED4= ", unused4
+  ELSEIF (variable == 'unused5' .OR. variable == 'UNUSED5') THEN
+    write(*,96)   "UNUSED5= ", unused5
+  ELSEIF (variable == 'unused6' .OR. variable == 'UNUSED6') THEN
+    write(*,96)   "UNUSED6= ", unused6
+  ELSEIF (variable == 'unused7' .OR. variable == 'UNUSED7') THEN
+    write(*,96)   "UNUSED7= ", unused7
+  ELSEIF (variable == 'unused8' .OR. variable == 'UNUSED8') THEN
+    write(*,96)   "UNUSED8= ", unused8
+  ELSEIF (variable == 'unused9' .OR. variable == 'UNUSED9') THEN
+    write(*,96)   "UNUSED9= ", unused9
+  ELSEIF (variable == 'unused10' .OR. variable == 'UNUSED10') THEN
+    write(*,96)   "UNUSED10= ", unused10
+  ELSEIF (variable == 'unused11' .OR. variable == 'UNUSED11') THEN
+    write(*,96)   "UNUSED11= ", unused11
+  ELSEIF (variable == 'unused12' .OR. variable == 'UNUSED12') THEN
+    write(*,96)   "UNUSED12= ", unused12
+  ELSEIF (variable == 'unused13' .OR. variable == 'UNUSED13') THEN
+    write(*,96)   "UNUSED13= ", unused13
+  ELSEIF (variable == 'unused14' .OR. variable == 'UNUSED14') THEN
+    write(*,96)   "UNUSED14= ", unused14
+  ELSEIF (variable == 'unused15' .OR. variable == 'UNUSED15') THEN
+    write(*,96)   "UNUSED15= ", unused15
+  ELSEIF (variable == 'unused16' .OR. variable == 'UNUSED16') THEN
+    write(*,96)   "UNUSED16= ", unused16
+  ELSEIF (variable == 'unused17' .OR. variable == 'UNUSED17') THEN
+    write(*,96)   "UNUSED17= ", unused17
   ELSEIF (variable == 'nzyear' .OR. variable == 'NZYEAR') THEN
     write(*,97)   "NZYEAR= ", nzyear
   ELSEIF (variable == 'nzjday' .OR. variable == 'NZJDAY') THEN

@@ -23,6 +23,13 @@ set kstnm = `../bin/sachead 201002090103.AZ.LVA2.BHT.sac KSTNM | awk '{print $2}
 echo $kstnm
 #---------------------------------------------------------------------------------------#
 
+# Test sacunused
+#---------------------------------------------------------------------------------------#
+echo "check sacunused.  write "45.5" to variable unused2 and read it back out"
+../bin/sacunused 201002090103.AZ.LVA2.BHT.sac 2 45.5
+../bin/sachead 201002090103.AZ.LVA2.BHT.sac UNUSED2
+#---------------------------------------------------------------------------------------#
+
 # Test sac2xy  and sac2xyfill
 #---------------------------------------------------------------------------------------#
 ../bin/sac2xy 201002090103.AZ.LVA2.BHT.sac A.xy
