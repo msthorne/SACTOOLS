@@ -23,11 +23,27 @@ eof
 rm mavg_apollostat14_envelope.sac
 rm original.xy
 rm envelope.xy
+#---------------------------------------------------------------------------------------#
 
-gs -sDEVICE=x11 Examples_03.ps
+# Test stalta
+#---------------------------------------------------------------------------------------#
+../bin/stalta apollostat14_envelope.sac 5.0 100.0
+../bin/sac2xy sta.sac sta.xy
+../bin/sac2xy lta.sac lta.xy
+../bin/sac2xy snr.sac snr.xy 
+
+psxy sta.xy -JX6i/2i -R500/3500/-.1/1.1 -P -O -K -W2/0/0/205 \
+  -B500g10000f50/1g10000f2nSeW -Y3i >> Examples_03.ps
+psxy lta.xy -JX -R -P -O -K -W8/0/0/0 >> Examples_03.ps
+psxy snr.xy -JX -R500/3500/-.1/9 -P -O -K -W6/205/0/0 -Y2.5i -B >> Examples_03.ps
+
+
+rm sta.sac lta.sac snr.sac
+rm sta.xy lta.xy snr.xy
 #---------------------------------------------------------------------------------------#
 
 
 
 rm .gmtcommands4
+gs -sDEVICE=x11 Examples_03.ps
 

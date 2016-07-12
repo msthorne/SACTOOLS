@@ -39,7 +39,9 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 
 10) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
 
-11) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
+11) stalta (stalta.f90) - computes STA/LTA of a SAC file.
+
+12) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
                           file.
 
 
@@ -50,6 +52,8 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 
 # To Do
 #------------------------------------------------------------------------------------#
+#  add example for testing sacsnr
+#  test stalta beginning of files.  check that things start smoothly
 
 
 # This is just a listing of codes that I already have that I will be adding to
@@ -61,6 +65,5 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 4)  rmserror  - calculates RMS misfit between 2 SAC files.
 5)  sacmax    - finds maximum/minimum amplitudes (and corresponding times) within a set
                 time window in a SAC file.
-6)  stalta    - computes STA/LTA of a SAC file.
-7)  xcorr     - time domain cross-correlation between SAC files.
-8)  convolve  - convolve basic functions with a SAC file.
+6)  xcorr     - time domain cross-correlation between SAC files.
+7)  convolve  - convolve basic functions with a SAC file.
