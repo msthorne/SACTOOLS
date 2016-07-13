@@ -5,7 +5,7 @@
 # Plotting is done using the Generic Mapping Tools (GMT) package
 #
 # This script tests:
-# sachead, sac2xy, sac2xyfill, stacksac, stacksacgc, stacksacaz
+# sachead, sac2xy, sac2xyfill, stacksac, stacksacgc, stacksacaz, sacunused
 #
 #---------------------------------------------------------------------------------------#
 
