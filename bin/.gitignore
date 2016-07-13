@@ -1,6 +1,7 @@
 # Ignore the following executable files in updates
 amp2sac
 mavg
+rmserror
 sac2xy
 sac2xyfill
 sachead
