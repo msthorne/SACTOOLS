@@ -5,7 +5,7 @@
 # Plotting is done using the Generic Mapping Tools (GMT) package
 #
 # This script tests:
-# rmserror
+# rmserror, sacsnr
 #
 #---------------------------------------------------------------------------------------#
 
@@ -41,6 +41,41 @@ eof
 
 rm rmserror.txt
 rm synth.xy data.xy
+#---------------------------------------------------------------------------------------#
+
+
+# Test sacsnr
+#---------------------------------------------------------------------------------------#
+../bin/sacsnr 201001271742.CO.CASEE.HHT.sac -n -180. -40. -s 0. 20.
+set tmax = `awk 'NR == 1 {print $2}' snr.txt`
+set amax = `awk 'NR == 1 {print $3}' snr.txt`
+set namp = `awk 'NR == 1 {print $4}' snr.txt`
+set SNR = `awk 'NR == 1 {print $5}' snr.txt`
+
+../bin/sac2xy 201001271742.CO.CASEE.HHT.sac data.xy
+
+psxy data.xy -JX6i/2i -R-200/100/-.5/1.2 -P -O -K -Y3.2i \
+  -B20g10000f5nSew -W4/0/0/205 >> Examples_04.ps
+psxy -JX -R -P -O -K -Sc.15i -W4/205/0/0 << efg >> Examples_04.ps
+$tmax $amax
+efg
+psxy -JX -R -P -O -K -W5/205/0/0 << efg >> Examples_04.ps
+-180. $namp
+-40. $namp
+efg
+
+pstext -JX -R -N -O -K -P -G0/0/0 << eof >> Examples_04.ps
+-200 1.7 12 0 1 1 Program: sacsnr
+eof
+pstext -JX -R -N -O -K -P -G0/0/205 << eof >> Examples_04.ps
+-200 1.5 12 0 1 1 Data: 201001271742.CO.CASEE.HHT.sac
+eof
+pstext -JX -R -N -O -K -P -G205/0/0 << eof >> Examples_04.ps
+-200 1.3 12 0 1 1 SNR: $SNR
+eof
+
+
+rm snr.txt data.xy
 rm .gmtcommands4
 #---------------------------------------------------------------------------------------#
 
