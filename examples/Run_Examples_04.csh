@@ -5,7 +5,7 @@
 # Plotting is done using the Generic Mapping Tools (GMT) package
 #
 # This script tests:
-# rmserror, sacsnr
+# rmserror, sacsnr, sacmax
 #
 #---------------------------------------------------------------------------------------#
 
@@ -76,6 +76,38 @@ eof
 
 
 rm snr.txt data.xy
+#---------------------------------------------------------------------------------------#
+
+# Test sacmax
+#---------------------------------------------------------------------------------------#
+../bin/sacmax 200308250628.TILT.ASUH.LR.sac -10. 20. >! smax.txt
+set Amax = `awk 'NR == 1 {print $2}' smax.txt`
+set Tmax = `awk 'NR == 1 {print $4}' smax.txt`
+set Amin = `awk 'NR == 1 {print $3}' smax.txt`
+set Tmin = `awk 'NR == 1 {print $5}' smax.txt`
+
+../bin/sac2xy 200308250628.TILT.ASUH.LR.sac data.xy
+psxy data.xy -JX6i/2i -R-20/40/-.75/1.1 -P -O -K -Y3.2i \
+  -B20g10000f5nSew -W4/0/0/205 >> Examples_04.ps
+
+# plot circle on max within time window
+psxy -JX -R -P -O -K -Sc.15i -W4/205/0/0 << eof >> Examples_04.ps
+$Tmax $Amax
+eof
+
+# plot circle on min within time window
+psxy -JX -R -P -O -K -Sc.15i -W4/205/0/0 << eof >> Examples_04.ps
+$Tmin $Amin
+eof
+
+pstext -JX -R -N -O -K -P -G0/0/205 << eof >> Examples_04.ps
+-20 1.2 12 0 1 1 Data: 200308250628.TILT.ASUH.LR.sac
+eof
+pstext -JX -R -N -O -P -G0/0/0 << eof >> Examples_04.ps
+-20 1.4 12 0 1 1 Program: sacmax
+eof
+
+rm smax.txt data.xy
 rm .gmtcommands4
 #---------------------------------------------------------------------------------------#
 

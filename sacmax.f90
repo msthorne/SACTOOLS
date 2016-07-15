@@ -1,5 +1,9 @@
 PROGRAM getsacmax
-! in a SAC file in a time interval [time1,time2]
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
+! Get max amplitude from a SAC file within a specified time range.
+!
+! michael.thorne@utah.edu
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 USE sac_i_o
 IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: idata
@@ -10,7 +14,7 @@ INTEGER(KIND=4) :: npts1
 CHARACTER(LEN=16) :: input
 CHARACTER(LEN=100) :: sacfile
 
-!    --  R E A D  U S E R  I N P U T  --
+!    --  READ USER INPUT  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 3) THEN
@@ -26,7 +30,7 @@ read(input,*) time1
 CALL GETARG(3,input)
 read(input,*) time2
 
-!    --  R E A D   I N P U T  S A C  F I L E S  --
+!    --  READ INPUT SAC FILE   --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !read sacfile
@@ -49,14 +53,14 @@ IF (nvhdr /= 6) THEN
   STOP
 ENDIF
 
-!    --  F I N D   M A X / M I N  B E T W E E N  T 1 & T 2  --
+!    --  FIND MAX/MIN BETWEEN T1 & T2  --
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 tt = b1
 Amax = MINVAL(idata(:))
 Amin = MAXVAL(idata(:))
 Tmax = 0.0
 Tmin = 0.0
-DO J=1,npts1
+DO J=0,(npts1-1)
   IF (tt >= time1 .AND. tt <= time2) THEN
 
     IF (idata(J) > Amax) THEN
@@ -71,9 +75,11 @@ DO J=1,npts1
 
   ENDIF
 
-  tt = tt + delta1
+  tt = b1 + delta1*J
 ENDDO
 
+!    -- WRITE OUTPUT TO STDOUT
+!:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 write(*,*) "Amax,Amin,Tmax,Tmin=", Amax, Amin, Tmax, Tmin
 
 
