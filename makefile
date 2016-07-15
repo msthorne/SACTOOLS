@@ -7,7 +7,7 @@ RM=/bin/rm -f
 BINDIR=./bin                 
 
 
-all : modules amp2sac mavg rmserror sac2xy sac2xyfill sachead sacmax sacsnr sacunused stacksac stacksacgc stacksacaz stalta xy2sac 
+all : modules amp2sac mavg rmserror sac2xy sac2xyfill sachead sacmax sacpeaks sacsnr sacunused stacksac stacksacgc stacksacaz stalta xy2sac 
 
 #Compile modules.
 modules : mod_sac_io.f90
@@ -41,6 +41,10 @@ sachead : sachead.f90 modules
 sacmax : sacmax.f90 modules
 	$(F90) $(FFLAGS) sacmax.f90 -o sacmax ./mod_sac_io.o
 	mv sacmax $(BINDIR)
+
+sacpeaks : sacpeaks.f90 modules
+	$(F90) $(FFLAGS) sacpeaks.f90 -o sacpeaks ./mod_sac_io.o
+	mv sacpeaks $(BINDIR)
 
 sacsnr : sacsnr.f90 modules
 	$(F90) $(FFLAGS) sacsnr.f90 -o sacsnr ./mod_sac_io.o

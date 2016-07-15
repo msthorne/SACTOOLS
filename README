@@ -33,20 +33,22 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 7) sacmax (sacmax.f90)    - finds maximum/minimum amplitudes (and corresponding times) within a set
                             time window in a SAC file.
 
-8) sacsnr (sacsnr.f90) - compute estimate of signal to noise ratio in SAC file.
+8) sacpeaks (sacpeaks.f90) - finds maxima/minima (tunable) in a SAC file.
 
-9) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
+9) sacsnr (sacsnr.f90) - compute estimate of signal to noise ratio in SAC file.
 
-10) stacksac (stacksac.f90) - linearly stack some SAC files.
+10) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
 
-11) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
+11) stacksac (stacksac.f90) - linearly stack some SAC files.
+
+12) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
                                    epicentral distance bins.
 
-12) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
+13) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
 
-13) stalta (stalta.f90) - computes STA/LTA of a SAC file.
+14) stalta (stalta.f90) - computes STA/LTA of a SAC file.
 
-14) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
+15) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
                           file.
 
 
@@ -64,7 +66,6 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 #------------------------------------------------------------------------------------#
 1)  mergesac  - merges multiple SAC files into a single file.
 2)  padsac    - pads two SAC files with zeros to start and end at the same time.
-3)  peaks     - finds peaks in SAC files.
-4)  xcorr     - time domain cross-correlation between SAC files.
-5)  convolve  - convolve basic functions with a SAC file.
-6)  residuals - get residuals and plot histogram between data and synthetic
+3)  xcorr     - time domain cross-correlation between SAC files.
+4)  convolve  - convolve basic functions with a SAC file.
+5)  residuals - get residuals and plot histogram between data and synthetic
