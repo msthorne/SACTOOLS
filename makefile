@@ -7,13 +7,17 @@ RM=/bin/rm -f
 BINDIR=./bin                 
 
 
-all : modules amp2sac mavg rmserror sac2xy sac2xyfill sachead sacmax sacpeaks sacsnr sacunused stacksac stacksacgc stacksacaz stalta xy2sac 
+all : modules addnoise amp2sac mavg rmserror sac2xy sac2xyfill sachead sacmax sacpeaks sacsnr sacunused stacksac stacksacgc stacksacaz stalta xy2sac 
 
 #Compile modules.
 modules : mod_sac_io.f90
 	$(F90) $(FFLAGS) -c mod_sac_io.f90
 
 #Compile Source-code and link.
+addnoise : addnoise.f90 modules
+	$(F90) $(FFLAGS) addnoise.f90 -o addnoise ./mod_sac_io.o
+	mv addnoise $(BINDIR)
+
 amp2sac : amp2sac.f90 modules
 	$(F90) $(FFLAGS) amp2sac.f90 -o amp2sac ./mod_sac_io.o
 	mv amp2sac $(BINDIR)
