@@ -10,7 +10,7 @@ IMPLICIT NONE
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: dinput, stacked
 REAL(KIND=4), DIMENSION(:), ALLOCATABLE :: dummy, weights
 REAL(KIND=4)       :: delta1, delta2, b1, b2, e1, e2
-REAL(KIND=4)       :: n1, n2, time, summ, ave
+REAL(KIND=4)       :: n1, n2, time, summ, ave, root
 INTEGER(KIND=4)    :: NN, ios, npts1, npts2, npts3, J, JK, nsum
 INTEGER(KIND=4)    :: NR
 INTEGER(KIND=4), PARAMETER :: maxrecs = 10000
@@ -21,9 +21,10 @@ CHARACTER(LEN=112) :: file2, ofile
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 NN = IARGC()
 IF (NN < 1) THEN
-  write(*,'(a)') "usage:  varstack filelist n1 n2"
+  write(*,'(a)') "usage:  varstack filelist n1 n2 root"
   write(*,'(a)') "        filelist: list of files to be stacked"
   write(*,'(a)') "        n1, n2: noise window"
+  write(*,'(a)') "        root:  root of stack for n-th root stacking"
   STOP
 ENDIF
 
@@ -39,9 +40,12 @@ CALL GETARG(2,junk)
 READ(junk,*) n1
 CALL GETARG(3,junk)
 READ(junk,*) n2
+CALL GETARG(4,junk)
+READ(junk,*) root
 
 write(*,*) "Stacking SAC files in list '", TRIM(adjustl(file1)), "' ..."
 write(*,*) "  Calculating noise level from: ", n1, "-", n2, " (s)"
+write(*,*) "  Using: ", root, " root stacking..."
 !:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:=====:!
 
 !    -- FIND TOTAL # OF FILES
@@ -168,15 +172,16 @@ DO J=1,NR
 
   IF (J == 1) THEN
     ALLOCATE(stacked(npts1))
-    stacked(1:npts1) = weights(J)*dinput(1:npts1)
+    stacked(1:npts1) = weights(J)*SIGN(ABS(dinput(1:npts1))**(1./root),dinput(1:npts1))
   ELSE
-    stacked(1:npts3) = stacked(1:npts3) + weights(J)*dinput(1:npts3)
+    stacked(1:npts3) = stacked(1:npts3) + weights(J)*SIGN(ABS(dinput(1:npts3))**(1./root),dinput(1:npts3))
   ENDIF
 
   write(33,*) TRIM(ADJUSTL(file2)), weights(J)/SUM(weights)
 ENDDO
 CLOSE(33)
-stacked = stacked/SUM(weights)
+
+stacked(1:npts3) = (SIGN(ABS(stacked(1:npts3))**(root),stacked(1:npts3)))/SUM(weights)
 
 
 

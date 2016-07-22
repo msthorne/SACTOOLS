@@ -17,38 +17,42 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 
 # Codes currently included in the repository:
 #------------------------------------------------------------------------------------#
-1) amp2sac (amp2sac.f90) - takes a column of amplitude values in ASCII and converts
+1) addnoise (addnoise.f90) - add colored noise to SAC files.
+
+2) amp2sac (amp2sac.f90) - takes a column of amplitude values in ASCII and converts
                            these to SAC format.
 
-2) mavg (mavg.f90) - computes a n-point moving average on a SAC file.
+3) mavg (mavg.f90) - computes a n-point moving average on a SAC file.
 
-3) rmserror (rmserror.f90 ) - compute RMS error between data and synthetic.
+4) rmserror (rmserror.f90 ) - compute RMS error between data and synthetic.
 
-4) sac2xy (sac2xy.f90) - converts a SAC file into an x,y table of time and amplitude.
+5) sac2xy (sac2xy.f90) - converts a SAC file into an x,y table of time and amplitude.
 
-5) sac2xyfill (sac2xyfill.f90) - same as sac2xy but fills in the positive amplitudes.
+6) sac2xyfill (sac2xyfill.f90) - same as sac2xy but fills in the positive amplitudes.
 
-6) sachead (sachead.f90) - return the value of a SAC header variable.
+7) sachead (sachead.f90) - return the value of a SAC header variable.
 
-7) sacmax (sacmax.f90)    - finds maximum/minimum amplitudes (and corresponding times) within a set
+8) sacmax (sacmax.f90)    - finds maximum/minimum amplitudes (and corresponding times) within a set
                             time window in a SAC file.
 
-8) sacpeaks (sacpeaks.f90) - finds maxima/minima (tunable) in a SAC file.
+9) sacpeaks (sacpeaks.f90) - finds maxima/minima (tunable) in a SAC file.
 
-9) sacsnr (sacsnr.f90) - compute estimate of signal to noise ratio in SAC file.
+10) sacsnr (sacsnr.f90) - compute estimate of signal to noise ratio in SAC file.
 
-10) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
+11) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
 
-11) stacksac (stacksac.f90) - linearly stack some SAC files.
+12) stacksac (stacksac.f90) - linearly stack some SAC files.
 
-12) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
+13) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
                                    epicentral distance bins.
 
-13) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
+14) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
 
-14) stalta (stalta.f90) - computes STA/LTA of a SAC file.
+15) stalta (stalta.f90) - computes STA/LTA of a SAC file.
 
-15) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
+16) varstack (varstack.f90) - Stack SAC files using the variance of the noise as weights.
+
+17) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
                           file.
 
 
