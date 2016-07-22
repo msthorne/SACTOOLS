@@ -1,4 +1,5 @@
 # Ignore the following executable files in updates
+addnoise
 amp2sac
 mavg
 rmserror
@@ -13,4 +14,5 @@ stacksac
 stacksacgc
 stacksacaz
 stalta
+varstack
 xy2sac
