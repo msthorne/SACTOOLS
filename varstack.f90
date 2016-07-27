@@ -97,7 +97,7 @@ DO J=1,NR
        summ = summ + dinput(JK)
        nsum = nsum + 1
     ENDIF
-    time = time + J*delta1
+    time = b1 + JK*delta1
   ENDDO
   ave = summ/real(nsum) 
 
@@ -109,7 +109,7 @@ DO J=1,NR
        summ = summ + (dinput(JK)-ave)**2
        nsum = nsum + 1
     ENDIF
-    time = time + J*delta1
+    time = b1 + JK*delta1
   ENDDO
   summ = summ/real(nsum)
  
