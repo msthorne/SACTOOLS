@@ -12,8 +12,8 @@
 
 # Test addnoise
 #---------------------------------------------------------------------------------------#
-set RMS = 0.1
-set corner = 0.4
+set RMS = 0.2
+set corner = 0.1
 
 
 ls DDP*.T >! flist
@@ -59,7 +59,7 @@ efg
 # plot amplitude spectrum as a function of period
 ../bin/sac2xy noise.sac.am A.xy
 awk 'NR > 1 {print (1.0/$1), $2}' A.xy >! B.xy
-psxy B.xy -JX6il/2il -Y2.75i -R0.01/1000/0.01/10 -W1/0/0/205 -P -O -K \
+psxy B.xy -JX6il/2il -Y2.75i -R0.01/1000/0.01/100 -W1/0/0/205 -P -O -K \
   -B10g10000:"Period (s)":/10g10000nSeW >> Examples_06.ps
 
 # add true corner (2*pi*$corner)
@@ -70,7 +70,7 @@ $cc 10
 eof
 
 pstext -JX -R -N -O -G0/0/205 << eof >> Examples_06.ps
-0.01 12 12 0 1 1 Amplitude Spectrum of noise
+0.01 102 12 0 1 1 Amplitude Spectrum of noise
 eof
 
 
