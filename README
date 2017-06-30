@@ -24,35 +24,37 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 
 3) mavg (mavg.f90) - computes a n-point moving average on a SAC file.
 
-4) rmserror (rmserror.f90 ) - compute RMS error between data and synthetic.
+4) prem (prem.f90) - returns values from the PREM model.
 
-5) sac2xy (sac2xy.f90) - converts a SAC file into an x,y table of time and amplitude.
+5) rmserror (rmserror.f90 ) - compute RMS error between data and synthetic.
 
-6) sac2xyfill (sac2xyfill.f90) - same as sac2xy but fills in the positive amplitudes.
+6) sac2xy (sac2xy.f90) - converts a SAC file into an x,y table of time and amplitude.
 
-7) sachead (sachead.f90) - return the value of a SAC header variable.
+7) sac2xyfill (sac2xyfill.f90) - same as sac2xy but fills in the positive amplitudes.
 
-8) sacmax (sacmax.f90)    - finds maximum/minimum amplitudes (and corresponding times) within a set
+8) sachead (sachead.f90) - return the value of a SAC header variable.
+
+9) sacmax (sacmax.f90)    - finds maximum/minimum amplitudes (and corresponding times) within a set
                             time window in a SAC file.
 
-9) sacpeaks (sacpeaks.f90) - finds maxima/minima (tunable) in a SAC file.
+10) sacpeaks (sacpeaks.f90) - finds maxima/minima (tunable) in a SAC file.
 
-10) sacsnr (sacsnr.f90) - compute estimate of signal to noise ratio in SAC file.
+11) sacsnr (sacsnr.f90) - compute estimate of signal to noise ratio in SAC file.
 
-11) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
+12) sacunused (sacunused.f90) - sets 'unused' header variables in SAC files.
 
-12) stacksac (stacksac.f90) - linearly stack some SAC files.
+13) stacksac (stacksac.f90) - linearly stack some SAC files.
 
-13) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
+14) stacksacgc (stacksacgc.f90) - takes a group of SAC files and stacks them in 
                                    epicentral distance bins.
 
-14) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
+15) stacksacaz (stacksacaz.f90) - Stack a group of SAC files in azimuth bins.
 
-15) stalta (stalta.f90) - computes STA/LTA of a SAC file.
+16) stalta (stalta.f90) - computes STA/LTA of a SAC file.
 
-16) varstack (varstack.f90) - Stack SAC files using the variance of the noise as weights.
+17) varstack (varstack.f90) - Stack SAC files using the variance of the noise as weights.
 
-17) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
+18) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
                           file.
 
 
@@ -60,6 +62,8 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 #------------------------------------------------------------------------------------#
 1) mod_sac_io.f90 - authored by Nicholas Schmerr. Fortran module for reading/
                     writing SAC files
+
+2) getprem_mod.f90 - module for calculating PREM values.
 
 # To Do
 #------------------------------------------------------------------------------------#

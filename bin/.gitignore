@@ -2,6 +2,7 @@
 addnoise
 amp2sac
 mavg
+prem
 rmserror
 sac2xy
 sac2xyfill

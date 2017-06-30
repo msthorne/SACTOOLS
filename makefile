@@ -7,11 +7,12 @@ RM=/bin/rm -f
 BINDIR=./bin                 
 
 
-all : modules addnoise amp2sac mavg rmserror sac2xy sac2xyfill sachead sacmax sacpeaks sacsnr sacunused stacksac stacksacgc stacksacaz stalta varstack xy2sac 
+all : modules addnoise amp2sac geosort mavg prem rmserror sac2xy sac2xyfill sachead sacmax sacpeaks sacsnr sacunused stacksac stacksacgc stacksacaz stalta varstack xy2sac 
 
 #Compile modules.
-modules : mod_sac_io.f90
+modules : mod_sac_io.f90 getprem_mod.f90
 	$(F90) $(FFLAGS) -c mod_sac_io.f90
+	$(F90) $(FFLAGS) -c getprem_mod.f90
 
 #Compile Source-code and link.
 addnoise : addnoise.f90 modules
@@ -22,9 +23,17 @@ amp2sac : amp2sac.f90 modules
 	$(F90) $(FFLAGS) amp2sac.f90 -o amp2sac ./mod_sac_io.o
 	mv amp2sac $(BINDIR)
 
+geosort : geosort.f90 modules
+	$(F90) $(FFLAGS) geosort.f90 -o geosort ./mod_sac_io.o
+	mv geosort $(BINDIR)
+
 mavg : mavg.f90 modules
 	$(F90) $(FFLAGS) mavg.f90 -o mavg ./mod_sac_io.o
 	mv mavg $(BINDIR)
+
+prem : getprem_mod.f90 prem.f90
+	$(F90) $(FFLAGS) prem.f90 -o prem ./getprem_mod.o
+	mv prem $(BINDIR)
 
 rmserror: rmserror.f90 modules
 	$(F90) $(FFLAGS) rmserror.f90 -o rmserror ./mod_sac_io.o
@@ -83,6 +92,6 @@ xy2sac : xy2sac.f90 modules
 	mv xy2sac $(BINDIR)
 
 clean :
-	  $(RM) mod_sac_io.o sac_i_o.mod
+	  $(RM) mod_sac_io.o sac_i_o.mod getprem_mod.o getprem.mod
 
 
