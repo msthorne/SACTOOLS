@@ -15,7 +15,7 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 #------------------------------------------------------------------------------------#
 
 
-# Codes currently included in the repository:
+# Fortran codes currently included in the repository:
 #------------------------------------------------------------------------------------#
 1) addnoise (addnoise.f90) - add colored noise to SAC files.
 
@@ -57,13 +57,18 @@ Author:  Michael Thorne (michael.thorne@utah.edu)
 18) xy2sac (xy2sac.f90) - convert an x,y table of time and amplitude values into a SAC
                           file.
 
-
 # Modules included in the repository
 #------------------------------------------------------------------------------------#
 1) mod_sac_io.f90 - authored by Nicholas Schmerr. Fortran module for reading/
                     writing SAC files
 
 2) getprem_mod.f90 - module for calculating PREM values.
+
+
+# C-Shell utilities included
+#------------------------------------------------------------------------------------#
+1) statmap - quick and dirty event/station plotting.  For when you just want to see
+             where the events and stations for data in the cwd are located.
 
 # To Do
 #------------------------------------------------------------------------------------#

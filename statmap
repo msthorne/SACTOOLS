@@ -1,0 +1,88 @@
+#!/bin/csh
+
+# Simple script for generating event/station maps for records contained
+# in SAC format.  Will read header information (requres 'sachead')
+# from all SAC files in cwd specified by the file suffix provided
+# and produce a quick plot.  
+# Author contact:  michael.thorne@utah.edu
+
+echo "Station Map ..."
+
+# User input
+#:----:----:----:----:----:----:----:----:----:----:----:----:----:----:#
+echo "Enter SAC file suffix (e.g., .sac, .T, .R, ...):"
+set suffix = $<
+
+echo "Enter Center Longitude of Map"
+set clon = $<
+
+echo "Station Names on-off (1/0)"
+set stname = $<
+#:----:----:----:----:----:----:----:----:----:----:----:----:----:----:#
+
+ls *${suffix} >! .temp_statmap
+
+@ nr = `awk 'END {print NR}' .temp_statmap`
+@ n = 1
+while ($n <= $nr)
+set file = `awk 'NR == '$n' {print $1}' .temp_statmap`
+echo [ ${n} / ${nr} ]    $file
+
+set stla = `sachead $file stla | awk '{print $2}'`
+set stlo = `sachead $file stlo | awk '{print $2}'`
+set evla = `sachead $file evla | awk '{print $2}'`
+set evlo = `sachead $file evlo | awk '{print $2}'`
+set kstnm = `sachead $file kstnm | awk '{print $2}'`
+
+if ($n == 1) then
+ echo $evlo $evla >! .temp_events
+ echo $stlo $stla >! .temp_stats
+ echo $evlo $evla >! .temp_gcarcs
+ echo $stlo $stla >> .temp_gcarcs
+ echo ">" >> .temp_gcarcs
+ echo $stlo $stla 8 0 1 1 $kstnm >! .temp_kstnm
+else
+ echo $evlo $evla >> .temp_events
+ echo $stlo $stla >> .temp_stats
+ echo $evlo $evla >> .temp_gcarcs
+ echo $stlo $stla >> .temp_gcarcs
+ echo ">" >> .temp_gcarcs
+ echo $stlo $stla 8 0 1 1 $kstnm >> .temp_kstnm
+endif
+
+@ n = $n + 1
+end
+
+sort -n .temp_events | uniq >! .temp_event
+
+
+#Plot files
+pscoast -R-180/180/-90/90 -JR${clon}/7.5i -Dc -B0 \
+ -W1/4/100/100/100 -P -K -A40000 -X.5 -V  >! station_map.ps
+psxy .temp_gcarcs -JR -R -P -O -K -M -Wto1/0/0/0 >> station_map.ps
+psxy .temp_event -JR -R -P -O -K -Sa.15i -W2/0/0/0 -G205/0/0 >> station_map.ps
+psxy .temp_stats -JR -R -P -O -K -Si.125i -W2/0/0/0 -G0/0/205 >> station_map.ps
+if ($stname == 1) then
+pstext .temp_kstnm -JR -R -P -O -K -N >> station_map.ps
+endif
+
+set cwd = `pwd`
+set nev = `awk 'END {print NR}' .temp_event`
+pstext -R0/8/0/11 -JX8i/11i -P -O -N << END >> station_map.ps
+1 6.5 12 0 1 1 $cwd
+1 6.25 12 0 1 1 Number of Receivers: $nr
+1 6.0 12 0 1 1 Number of Events: $nev
+1 5.75 12 0 1 1 Center Longitude: $clon
+END
+
+rm .temp_statmap
+rm .temp_events
+rm .temp_event
+rm .temp_stats
+rm .temp_gcarcs
+rm .temp_kstnm
+rm .gmtcommands
+
+gs -sDEVICE=x11 station_map.ps
+
+
