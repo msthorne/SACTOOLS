@@ -7,7 +7,7 @@ RM=/bin/rm -f
 BINDIR=./bin                 
 
 
-all : modules addnoise amp2sac geosort mavg prem rmserror sac2xy sac2xyfill sachead sacmax sacpeaks sacsnr sacunused stacksac stacksacgc stacksacaz stalta varstack xy2sac 
+all : modules addnoise amp2sac geosort mavg prem radiussort rmserror sac2xy sac2xyfill sachead sacmax sacpeaks sacsnr sacunused stacksac stacksacgc stacksacaz stalta varstack xy2sac 
 
 #Compile modules.
 modules : mod_sac_io.f90 getprem_mod.f90
@@ -34,6 +34,10 @@ mavg : mavg.f90 modules
 prem : getprem_mod.f90 prem.f90
 	$(F90) $(FFLAGS) prem.f90 -o prem ./getprem_mod.o
 	mv prem $(BINDIR)
+
+radiussort : radiussort.f90 modules
+	$(F90) $(FFLAGS) radiussort.f90 -o radiussort ./mod_sac_io.o
+	mv radiussort $(BINDIR)
 
 rmserror: rmserror.f90 modules
 	$(F90) $(FFLAGS) rmserror.f90 -o rmserror ./mod_sac_io.o
